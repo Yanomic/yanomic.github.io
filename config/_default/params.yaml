@@ -30,7 +30,15 @@ marketing:
 header:
   navbar:
     enable: true
-    blox: floating-theme-toggler
+    blox: "navbar"
+    align: "right"
+    fixed_to_top: true
+    show_search: true
+    show_theme_chooser: true
+    #    highlight_active_link: true
+    logo:
+      text: "Yanomic"
+      filename: "icon.png"
 
 # Site footer
 footer:
