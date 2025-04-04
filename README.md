@@ -5,7 +5,7 @@
 ```bash
 hugo && \
 npm_config_yes=true npx pagefind --site "public" --output-subdir ../static/pagefind && \
-hugo server --buildDrafts
+hugo server --buildDrafts --cleanDestinationDir
 ```
 
 ## References
