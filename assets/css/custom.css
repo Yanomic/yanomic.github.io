@@ -1,0 +1,9 @@
+.hb-sidebar-container {
+    display: none;
+}
+
+.prose{
+    font-size: 1.0em;
+    line-height: 1.5;
+    max-width: 100%;
+}
