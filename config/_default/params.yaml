@@ -6,7 +6,7 @@
 # Appearance
 appearance:
   mode: system
-  color: blue
+  color: teal
 
 # SEO
 marketing:
@@ -61,3 +61,7 @@ features:
     enable: false
   privacy_pack:
     enable: false
+  repository:
+    url: 'https://github.com/HugoBlox/hugo-blox-builder/'
+    content_dir: starters/blog/content
+    branch: main

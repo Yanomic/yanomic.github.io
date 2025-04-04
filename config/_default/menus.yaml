@@ -10,3 +10,9 @@ main:
   - name: Blogs
     url: blogs/
     weight: 20
+  - name: Topics
+    url: tags/
+    weight: 30
+  - name: Categories
+    url: categories/
+    weight: 30

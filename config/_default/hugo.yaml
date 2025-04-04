@@ -31,6 +31,8 @@ footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
 permalinks:
   authors: '/author/:slug/'
+  tags: '/tag/:slug/'
+  categories: '/category/:slug/'
 disableAliases: true
 outputs:
   home: [HTML, RSS, headers, redirects]
@@ -41,12 +43,25 @@ imaging:
   anchor: smart
 timeout: 600000
 taxonomies:
+  tag: tags
+  category: categories
   author: authors
 markup:
   _merge: deep
   highlight:
-    lineNos: false
+    lineNos: true
+related:
+  threshold: 80
+  includeNewer: true
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 70
 security:
   _merge: deep
 sitemap:
+  _merge: deep
+minify:
   _merge: deep
