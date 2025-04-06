@@ -1,7 +1,7 @@
 :root {
-    --color-bg-inline-code: hsl(224, 20%, 94%);
-    --markmap-bg: hsla(224, 20%, 94%, 0.25);
-    --markmap-border: hsl(224, 20%, 94%);
+    --color-bg-inline-code: light-dark(hsl(224, 20%, 94%), hsl(224, 10%, 23%));
+    --markmap-bg: light-dark(hsl(224, 19%, 97%),hsl(224, 14%, 16%));
+
 }
 
 .hb-sidebar-container {
@@ -33,7 +33,6 @@
 
 div.markmap {
     background: var( --markmap-bg) ;
-    border: 1px solid var(--markmap-border);
 }
 
 .prose :where(code) {
