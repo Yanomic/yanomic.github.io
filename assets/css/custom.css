@@ -47,3 +47,7 @@ main > div:nth-child(3){
     margin-top: 0.8rem;
     margin-bottom: 1.5rem;
 }
+
+#search {
+    background-color: var(--pagefind-ui-background);
+}
