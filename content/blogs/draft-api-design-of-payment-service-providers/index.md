@@ -72,7 +72,7 @@ From our experience, we’ve observed a number of recurring issues across even t
 {{% /callout %}}
 
 This actually triggers our thinking on how would an ideal PSP API look like.
-The ideal API should be well-structured, consistent, extensibile, backward/forward compatible and free of problems mentioned above.
+The ideal API should be well-structured, consistent, extensibility, backward/forward compatible and free of problems mentioned above.
 
 
 ### Headers
@@ -91,7 +91,7 @@ In terms of HTTP request to PSP, the fields should be used to handle following i
 * **Client information**, e.g., `User-Agent: Mozilla/5.0`
 
   The request is usually sent from merchant server to PSP, where the client in such request is the merchant server. 
-  The client info is not so useful for PSP to process and coudl easily be confused with the device that shopper use to initiate the transaction.
+  The client info is not so useful for PSP to process and could easily be confused with the device that shopper use to initiate the transaction.
 
   We prefer to include Client Info as part of the [Device](#device) as we mention below.
 
@@ -159,7 +159,7 @@ Fields to hold data used to authenticate the transaction.
 ```
 
 #### Configuration
-Fields related to configuration of the payment behaviour.
+Fields related to configuration of the payment behavior.
 
 ```markmap{height="80px"}
 - **Configuration**
@@ -167,7 +167,7 @@ Fields related to configuration of the payment behaviour.
     - **routingFlag** |`string`: Allows you to determine the acquirer account that should be used for the transaction.
   - **Capture**
     - **mode** |`string`: Allows you to determine the way the capture should happen.
-    - **delayInHours** |`integer`: The delay between the authorisation and scheduled auto-capture, specified in hours.
+    - **delayInHours** |`integer`: The delay between the authorization and scheduled auto-capture, specified in hours.
 ```
 
 #### Device
@@ -177,7 +177,7 @@ Fields related to device with which the transaction is made.
 - **Device**
   - **channel** |`string`: The platform where a payment transaction takes place.
   - **deviceFingerprint** |`string`: A string containing the shopper's device fingerprint.
-  - **deviceRefence** |`string`: The unique reference for device that is processing the payment.
+  - **deviceReference** |`string`: The unique reference for device that is processing the payment.
   - **ipAddress** |`string`: The IP address of the device.
   - **locale** |`string`: Locale on the device.
   - **origin** |`string`: The origin URL of the page that you are loading the payment or 3D Secure Component from.
@@ -334,7 +334,7 @@ Fields related to the payment method used in the transaction.
 - **PaymentMethod**
   - **code** |`string`: A unique identifier representing the selected payment method.
   - **flow** |`string`: Specifies the payment flow to be initiated for the selected payment method.
-  - **details** |`map<strign, string>`: A key-value map containing any additional information required to process the selected payment method.
+  - **details** |`map<string, string>`: A key-value map containing any additional information required to process the selected payment method.
 ```
 
 #### Risk
@@ -371,7 +371,7 @@ Fields related to the shopper.
 ```
 
 #### Splits
-Fields instrut to split a payment.
+Fields used to instruct how a payment should be split.
 ```markmap{height="200px"}
 - **Splits[]**
   - **account** |`string`: The unique identifier of the account to which the split amount is booked.
