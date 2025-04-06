@@ -109,8 +109,8 @@ skills:
         icon: custom/mute
 ---
 
-As an engineer, I bring a profound understanding of the payment ecosystem, with expertise in addressing pain points in transaction flows and enabling seamless solutions across countries and regions. My passion lies in designing and optimizing systems that enhance user experiences and drive efficiency.
+As an engineer, I have deep expertise in the payment ecosystem, solving transaction pain points and building seamless, cross-border solutions. I’m passionate about designing systems that improve user experience and drive efficiency.
 
-As a tech enthusiast, I am deeply interested in backend architecture and related technologies, including messaging systems, microservices, databases, caching solutions, and containerization. I prioritize practical, reliable solutions that solve real-world problems over chasing cutting-edge technologies for their novelty.
+As a tech enthusiast, I focus on backend architecture—messaging systems, microservices, databases, caching, and containers—prioritizing practical, reliable solutions over hype.
 
-As a lead, I have extensive experience managing diverse teams across cultures and time zones. I excel in balancing team priorities, collaborating with cross-functional groups, and fulfilling my own commitments. My adaptable leadership style enables me to align with team dynamics and deliver impactful results.
+As a lead, I’ve managed diverse, distributed teams, balancing priorities, collaborating cross-functionally, and delivering on my commitments. My adaptable leadership style helps teams thrive and achieve meaningful results.
