@@ -43,3 +43,8 @@ div.markmap {
     color: unset;
     padding: .125rem .375rem;
 }
+
+main > div:nth-child(3){
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+}
