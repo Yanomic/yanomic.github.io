@@ -131,9 +131,11 @@ Fields that are directly related to the transaction or required across all trans
 
 ```markmap{height="200px"}
 - Root
-  - **amount**, The amount information for the transaction.
-  - **shopperStatement**, The text to be shown on the shopper's bank statement.
-  - **sessionValidity**, The date and time until when the session remains valid.
+  - **amount** |`amount`, The amount information for the transaction.
+  - **shopperStatement** |`string`, The text to be shown on the shopper's bank statement.
+  - **sessionValidity** |`date|YYY-MM-DDThh:mm:ssZ`, The date and time until when the session remains valid.
+  - **reference** |`string`, The reference to uniquely identify this transaction.
+  - **returnUrl** |`string`, The URL to return to in case of a redirection.
 ```
 
 #### Authentication
@@ -159,11 +161,11 @@ Fields to hold data used to authenticate the transaction.
 #### Configuration
 Fields related to configuration of the payment behaviour.
 
-```markmap{height="200px"}
-- Configuration
-  - Routing
+```markmap{height="80px"}
+- **Configuration**
+  - **Routing**
     - **routingFlag** |`string`: Allows you to determine the acquirer account that should be used for the transaction.
-  - capture
+  - **Capture**
     - **mode** |`string`: Allows you to determine the way the capture should happen.
     - **delayInHours** |`integer`: The delay between the authorisation and scheduled auto-capture, specified in hours.
 ```
@@ -172,7 +174,7 @@ Fields related to configuration of the payment behaviour.
 Fields related to device with which the transaction is made.
 
 ```markmap{height="300px"}
-- Device
+- **Device**
   - **channel** |`string`: The platform where a payment transaction takes place.
   - **deviceFingerprint** |`string`: A string containing the shopper's device fingerprint.
   - **deviceRefence** |`string`: The unique reference for device that is processing the payment.
@@ -181,7 +183,7 @@ Fields related to device with which the transaction is made.
   - **origin** |`string`: The origin URL of the page that you are loading the payment or 3D Secure Component from.
   - **os** |`string`: Operating system running on the device.
   - **osVersion** |`string`: Version of operating system running on the device.
-  - BrowserInfo
+  - **BrowserInfo**
     - **acceptHeader** |`string`: The accept header value of the shopper's browser.
     - **colorDepth** |`integer`: The `screen.colorDepth` property which indicates the color depth of the shopper's browser in bits per pixel.
     - **javaEnabled** |`bool`: Boolean value indicating if the shopper's browser is able to execute Java.
@@ -195,29 +197,30 @@ Fields related to device with which the transaction is made.
 
 #### Fund
 Fields related to fund used in the transaction.
-```markmap{height="100px"}
-- Fund
+```markmap{height="40px"}
+- **Fund**
   - **origin** |`string`: The person or entity funding the money.
   - **recipient** |`string`: The person or entity receiving the money
 ```
 
 #### Forex
 Fields related multi-currency payment.
-```markmap{height="200px"}
-- **baseAmount** |`amount`: The base amount.
-- **basePoint** |`integer`:The base amount.
-- **buyRate** |`amount`: The buy rate.
-- **interbank** |`amount`: The interbank amount.
-- **sellRate** |`amount`: The sell rate.
-- **source** |`string`: The source of the forex quote.
-- **type** |`string`: The type of forex.
-- **validTill** |`date|YYYY-MM-DDThh:mm:ssZ`: The date until which the forex quote is valid.
+```markmap{height="150px"}
+- **Forex**
+  - **baseAmount** |`amount`: The base amount.
+  - **basePoint** |`integer`:The base amount.
+  - **buyRate** |`amount`: The buy rate.
+  - **interbank** |`amount`: The interbank amount.
+  - **sellRate** |`amount`: The sell rate.
+  - **source** |`string`: The source of the forex quote.
+  - **type** |`string`: The type of forex.
+  - **validTill** |`date|YYYY-MM-DDThh:mm:ssZ`: The date until which the forex quote is valid.
 ```
 
 #### Installments
 Fields related to installment plan details.
 ```markmap{height="100px"}
-- Installments
+- **Installments**
   - **extra** |`integer`: Defines the bonus percentage, refund percentage or if the transaction is Buy now Pay later.
   - **plan** |`string`: The installment plan.
   - **numberOfInstallments** |`integer`: Defines the number of installments. Usually, the maximum allowed number of installments is capped.
@@ -226,7 +229,7 @@ Fields related to installment plan details.
 #### Mandate
 Fields related to mandate details.
 ```markmap{height="200px"}
-- Mandate
+- **Mandate**
   - **amount** |`amount`: The billing amount (in minor units) of the recurring transactions.
   - **amountRule** |`string`: The limitation rule of the billing amount.
   - **attemptsRule** |`string`: The rule to specify the period, within which the recurring debit can happen, relative to the mandate recurring date.
@@ -241,7 +244,7 @@ Fields related to mandate details.
 #### Merchant/Sub-Merchant
 Fields related to the entity to which the transaction belongs.
 ```markmap{height="200px"}
-- Merchant/Sub-Merchant
+- **Merchant/Sub-Merchant**
   - **mcc** `string`: The merchant category code, which relates to a particular market segment.
   - SubMerchant
     - **address** `string`: Sub-merchant's address.
@@ -256,13 +259,13 @@ Stores additional, non-functional information related to the payment.
 #### Order
 Fields related to order details.
 ```markmap{height="1000px"}
-- Order
+- **Order**
   - **billingAddress** |`address`: The address where to send the invoice.
   - **deliverAt** |`date|YYYY-MM-DD`: The date and time the purchased goods should be delivered.
   - **deliveryAddress** |`string`: The address where the purchased goods should be delivered.
   - **deliveryEmailAddress** |`string`: Email associated with the given product for electronic delivery.
   - **deliveryTimeframe** |`string`: The estimated delivery time for the shopper to receive the goods. 
-  - Items[]
+  - **Items[]**
     - **amountExcludingTax** |`amount`: Item amount excluding the tax, in minor units.
     - **amountIncludingTax** |`amount`: Item amount including the tax, in minor units.
     - **brand** |`string`: Brand of the item.
@@ -279,14 +282,14 @@ Fields related to order details.
     - **tax** |`amount`: Tax amount.
     - **taxRate** |`integer`: Tax percentage, in minor units.
     - **upc** |`integer`: Universal Product Code.
-  - Airline
+  - **Airline**
     - **agencyCode** |`string`: IATA code of the travel agency.
     - **agencyName** |`string`: Name of the travel agency.
     - **agencyInvoiceNumber** |`string`: Invoice number issued by the travel agency.
     - **agencyPlanName** |`string`: Name of the agency's fare plan (e.g., corporate travel plan).
     - **airlineCode** |`string`: IATA 2-letter airline code.
     - **airlineName** |`string`: Full name of the Airline.
-    - Legs[]
+    - **Legs[]**
       - **arrivalAirport** |`string`: IATA 3-letter arrival airport code.	
       - **class** |`string`: Travel class (Economy, Premium, Business, First).
       - **carrierCode** |`string`: Carrier code (if different from airline code).
@@ -295,14 +298,14 @@ Fields related to order details.
       - **flightDate** |`date|YYYY-MM-DDThh:mmZ`: Departure date/time (ISO 8601).
       - **flightNumber** |`string`: Departure date.
       - **stopoverCode** |`string`: Departure date.
-    - Passengers[]
+    - **Passengers[]**
       - **dateOfBirth** |`date|YYYY-MM-DD`: Passenger’s birth date.
       - **firstName** |`string`: Passenger’s first name.
       - **frequentFlyerNumber** |`string`: Loyalty program number.
       - **lastName** |`string`: Passenger’s last name.
       - **passengerType** |`string`: The IATA passenger type code (PTC).
       - **ticketNumber** |`string`: Unique ticket number (13 digits).
-  - CarRental
+  - **CarRental**
     - **agreementNumber** |`string`: The rental agreement number.
     - **pickUpDate** |`date|YYYY-MM-DD`: The pick-up date.
     - **pickUpLocation** |`address`: The pick-up location.
@@ -314,7 +317,7 @@ Fields related to order details.
     - **insuranceCharges** |`amount`: Fuel charges associated with the rental.
     - **rate** |`amount`: The rental rate.
     - **rateBase** |`string`: Base Rental Rate(daily/weekly).
-  - Lodging
+  - **Lodging**
     - **bookingNumber** |`string`: The unique id for the booking.
     - **checkInDate** |`date|YYYY-MM-DD`: The check-in date.
     - **checkOutDate** |`date|YYYY-MM-DD`: The check-out date.
@@ -325,39 +328,42 @@ Fields related to order details.
       - **type** `string`: The room type.      
 ```
 
-#### OpenInvoice
-Fields related to OpenInvoice details.
-
-
 #### Payment Method
 Fields related to the payment method used in the transaction.
+```markmap{height="100px"}
+- **PaymentMethod**
+  - **code** |`string`: A unique identifier representing the selected payment method.
+  - **details** |`map<strign, string>`: A key-value map containing any additional information required to process the selected payment method.
+```
 
 #### Risk
 Fields related to risk data of the transaction.
 ```markmap{height="100px"}
 - Risk
   - **fraudOffset** |`integer`: An integer value that is added to the normal fraud score. The value can be either positive or negative.
-````
-
+```
 
 #### Tokenization
 Fields related to tokenize the payment methods for future use.
 ```markmap{height="100px"}
-- Tokenization
+- **Tokenization**
   - **enableOneClick** |`bool`: Indicates whether to store the payment details for future one-click payments. 
   - **enableRecurring** |`bool`: Indicates whether to store the payment details for future recurring payments.
+  - **tokenReference** |`string`: Unique reference to the store token details.
 ```
 
 #### Shopper
 Fields related to the shopper.
 ```markmap{height="200px"}
-- Shopper
+- **Shopper**
   - **countryCode** |`string`: The shopper country code in ISO 3166-1 alpha-2 format.
   - **dateOfBirth** |`date|YYYY-MM-DD`: The shopper's date of birth.
   - **email** |`string`: The shopper's email address.
   - **firstName** |`name`: The shopper's first name.
+  - **gender** |`name`: The shopper's gender.
   - **lastName** |`name`: The shopper's last name.
   - **locale** |`string`: The locale of the shopper.
+  - **nationality** |`string`: The shopper's nationality.
   - **reference** |`string`: The reference to uniquely identify this shopper
   - **socialSecurityNumber** |`string`: The shopper's social security number.
   - **telephoneNumber** |`string`: The shopper's telephone number.
@@ -366,7 +372,7 @@ Fields related to the shopper.
 #### Splits
 Fields instrut to split a payment.
 ```markmap{height="200px"}
-- Splits[]
+- **Splits[]**
   - **account** |`string`: The unique identifier of the account to which the split amount is booked.
   - **amount** |`amount`: The amount of the split item.
   - **description** |`string`: Your description for the split item.
@@ -377,18 +383,18 @@ Fields instrut to split a payment.
 
 ### Path
 Path should used indicate the:
-* Resource identifier, e.g., `/payments/{payment_id}`
-* Versioning, e.g., `/refunds/{refund_id}`
-* Action or Sub-Resources, examples:
+* **Resource identifier**, e.g., `/payments/{payment_id}`
+* **Versioning**, e.g., `/refunds/{refund_id}`
+* **Action or Sub-Resources**, examples:
   * `/payments/{payment_id}/refunds`, list refunds of a payment
   * `/invoices/{invoice_id}/void`, void an invoice
 
 ### Query Parameter
 Query parameters are not so commonly used in PSPs. But it can be potentially used for:
-* Filtering & Search, to narrow down results based on specific criteria, e.g., `?status=completed`
-* Pagination & Limits, to control the volume of data returned, e.g., `?limit=50`, `?offset=100`
-* Sorting & Ordering, to specify how the data list in results are sorted, e.g., `?sort=created_at`, `?order=desc`
-* Field Selection, to reduce payload size by requesting only needed fields, `?fields=id,amount,status,customer.name,refunds`, 
+* **Filtering & Search**, to narrow down results based on specific criteria, e.g., `?status=completed`
+* **Pagination & Limits**, to control the volume of data returned, e.g., `?limit=50`, `?offset=100`
+* **Sorting & Ordering**, to specify how the data list in results are sorted, e.g., `?sort=created_at`, `?order=desc`
+* **Field Selection**, to reduce payload size by requesting only needed fields, `?fields=id,amount,status,customer.name,refunds`, 
 
 
 ## Appendix A: Common Data Types
