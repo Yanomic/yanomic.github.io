@@ -1,3 +1,7 @@
+:root {
+    --color-bg-inline-code: hsl(224, 20%, 94%)
+}
+
 .hb-sidebar-container {
     display: none;
 }
@@ -6,4 +10,20 @@
     font-size: 1.0em;
     line-height: 1.5;
     max-width: 100%;
+}
+
+.prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):before {
+    content: "";
+}
+
+.prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):after {
+    content: "";
+}
+
+.prose :where(code) {
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    font-weight: unset;
+    background-color: var(--color-bg-inline-code);
+    color: unset;
+    padding: .125rem .375rem;
 }
