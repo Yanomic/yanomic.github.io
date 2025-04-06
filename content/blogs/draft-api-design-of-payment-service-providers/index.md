@@ -355,8 +355,9 @@ Fields related to the shopper.
   - **countryCode** |`string`: The shopper country code in ISO 3166-1 alpha-2 format.
   - **dateOfBirth** |`date|YYYY-MM-DD`: The shopper's date of birth.
   - **email** |`string`: The shopper's email address.
+  - **firstName** |`name`: The shopper's first name.
+  - **lastName** |`name`: The shopper's last name.
   - **locale** |`string`: The locale of the shopper.
-  - **name** |`name`: The shopper's full name.
   - **reference** |`string`: The reference to uniquely identify this shopper
   - **socialSecurityNumber** |`string`: The shopper's social security number.
   - **telephoneNumber** |`string`: The shopper's telephone number.
@@ -408,11 +409,4 @@ Query parameters are not so commonly used in PSPs. But it can be potentially use
 - Amount
   - **currency** |`string`: The three-character ISO-4217 currency code.
   - **value** |`integer`: The amount of the transaction, in minor units.
-```
-
-### Name
-```markmap{height="40px"}
-- Name
-  - **firstName** |`string`: The first name.
-  - **lastName** |`string`: The last name.
 ```
