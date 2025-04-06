@@ -333,6 +333,7 @@ Fields related to the payment method used in the transaction.
 ```markmap{height="100px"}
 - **PaymentMethod**
   - **code** |`string`: A unique identifier representing the selected payment method.
+  - **flow** |`string`: Specifies the payment flow to be initiated for the selected payment method.
   - **details** |`map<strign, string>`: A key-value map containing any additional information required to process the selected payment method.
 ```
 
