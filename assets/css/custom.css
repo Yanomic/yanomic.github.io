@@ -1,5 +1,7 @@
 :root {
-    --color-bg-inline-code: hsl(224, 20%, 94%)
+    --color-bg-inline-code: hsl(224, 20%, 94%);
+    --markmap-bg: hsla(224, 20%, 94%, 0.25);
+    --markmap-border: hsl(224, 20%, 94%);
 }
 
 .hb-sidebar-container {
@@ -12,12 +14,26 @@
     max-width: 100%;
 }
 
+.prose :where(h4) {
+    font-size: 1.2em;
+}
+
+.prose :where(h5) {
+    font-size: 1em;
+    font-weight: 600;
+}
+
 .prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):before {
     content: "";
 }
 
 .prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):after {
     content: "";
+}
+
+div.markmap {
+    background: var( --markmap-bg) ;
+    border: 1px solid var(--markmap-border);
 }
 
 .prose :where(code) {
