@@ -140,22 +140,44 @@ Fields that are directly related to the transaction or required across all trans
 
 #### Authentication
 Fields to hold data used to authenticate the transaction.
-```markmap{height="200px"}
+```markmap{height="500px"}
 - **Authentication**
   - **AccountInfo**
-    - **accountAgeIndicator**, Indicates how long the cardholder's account has existed.
-    - **accountChangeDate**, The last date when account details (e.g., email, phone, name) were modified.
-    - **accountChangeIndicator**, Indicates when the account details were last changed.
-  - **ThreeDS**
+    - **accountAgeIndicator** |`string`: Indicates how long the cardholder's account has existed.
+    - **accountChangeDate** |`date|YYYY-MM-DD `: The last date when account details (e.g., email, phone, name) were modified.
+    - **accountChangeIndicator** |`string`: Indicates when the account details were last changed.
+    - **accountCreatedDate** |`date|YYYY-MM-DD `: The exact date when the cardholder's account was created.
+    - **accountPasswordChangeDate** |`date|YYYY-MM-DD `: The last date when the cardholder changed their password.
+    - **accountPasswordChangeIndicator** |`string`: Indicates when the cardholder last changed their account password.
     - **addressMatch** |`bool`: Whether the chosen delivery address is identical to the billing address.
-    - **challengeWindowSize**, The size of the challenge window displayed to the shopper in the challenge flow.
-    - **dataOnly**, Indicates whether to perform data only flow.
     - **deliveryAddressIndicator** |`string`: Indicator regarding the delivery address.
-    - **scaExemption**, Indicates the exemption type that you want to request for the particular transaction. 
-    - **version**, Indicates your preference for the 3D Secure version.
+    - **paymentAccountAgeIndicator** |`string`: Indicates how long the payment account (e.g., card registration) has existed.
+    - **purchaseLast6Months** |`integer`: Number of successful purchases made with this account in the past 6 months.
+    - **shippingAddressFirstUseDate** |`date|YYYY-MM-DD `: The first date when this shipping address was used for a transaction.
+    - **shippingAddressUsageIndicator** |`string`: Indicates how long the shipping address has been on file.
+    - **suspiciousAccountActivity** |`bool`: Indicates whether suspicious activity has been detected on the account.
+    - **transactionsLastDay** |`integer`: The total number of transaction attempts using this card in the last 24 hours.
+    - **transactionsLastYear** |`integer`: The total number of transaction attempts using this card in the past 12 months.
+  - **ThreeDS**
+    - **challengeWindowSize** |`string`: Indicates preferred size of the 3DS2 challenge window.
+    - **challengeWindowSize** |`string`: The size of the challenge window displayed to the shopper in the challenge flow.
+    - **dataOnly** |`string`: Indicates whether to perform data only flow.
+    - **nativeThreeDS** |`string`: Indicates if native 3D Secure authentication should be used when available.
+    - **scaExemption** |`string`: Indicates the exemption type that you want to request for the particular transaction.
+    - **version** |`string`: Indicates your preference for the 3D Secure version.
   - **MpiData**
-    - **authenticationResponse**, In 3D Secure 2, this is the transStatus from the challenge result. If the transaction was frictionless, omit this parameter.
-    - **cavv**, The cardholder authentication value (base64 encoded, 20 bytes in a decoded form).
+    - **authenticationResponse** |`string`: In 3D Secure 2, this is the transStatus from the challenge result.
+    - **cavv** |`string`: The cardholder authentication value (base64 encoded, 20 bytes in a decoded form).
+    - **cavvAlgorithm** |`string`: The CAVV algorithm used. Include this only for 3D Secure 1.
+    - **challengeCancel** |`string`: Indicator informing the Access Control Server (ACS) and the Directory Server (DS) that the authentication has been cancelled.
+    - **directoryResponse** |`string`: In 3D Secure 2, this is the transStatus from the ARes.
+    - **dsTransID** |`string`: Supported for 3D Secure 2. The unique transaction identifier assigned by the Directory Server (DS) to identify a single transaction.
+    - **eci** |`string`: The electronic commerce indicator.
+    - **riskScore** |`string`: Risk score calculated by Directory Server (DS)
+    - **threeDSVersion** |`string`: The version of the 3D Secure protocol.
+    - **tavv** |`string`: Network token authentication verification value (TAVV). The network token cryptogram.
+    - **transStatusReason** |`string`: Provides information on why the transStatus field has the specified value. 
+    - **xid** |`string`: Supported for 3D Secure 1. The transaction identifier (Base64-encoded, 20 bytes in a decoded form).
 ```
 
 #### Configuration
