@@ -388,8 +388,7 @@ Fields related to risk data of the transaction.
 Fields related to tokenize the payment methods for future use.
 ```markmap{height="100px"}
 - **Tokenization**
-  - **enableOneClick** |`bool`: Indicates whether to store the payment details for future one-click payments. 
-  - **enableRecurring** |`bool`: Indicates whether to store the payment details for future recurring payments.
+  - **useCases** |`string[]`: Indicates the use cases for the store token.
 ```
 
 #### Shopper
