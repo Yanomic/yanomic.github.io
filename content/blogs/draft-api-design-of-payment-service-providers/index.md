@@ -132,10 +132,10 @@ Fields that are directly related to the transaction or required across all trans
 ```markmap{height="200px"}
 - Root
   - **amount** |`amount`, The amount information for the transaction.
-  - **shopperStatement** |`string`, The text to be shown on the shopper's bank statement.
-  - **sessionValidity** |`date|YYY-MM-DDThh:mm:ssZ`, The date and time until when the session remains valid.
   - **reference** |`string`, The reference to uniquely identify this transaction.
   - **returnUrl** |`string`, The URL to return to in case of a redirection.
+  - **sessionValidity** |`date|YYY-MM-DDThh:mm:ssZ`, The date and time until when the session remains valid.
+  - **shopperStatement** |`string`, The text to be shown on the shopper's bank statement.
 ```
 
 #### Authentication
@@ -351,7 +351,7 @@ Fields related to order details.
 Fields related to the payment method used in the transaction.
 ```markmap{height="100px"}
 - **PaymentMethod**
-  - **code** |`string`: A unique identifier representing the selected payment method.
+  - **type** |`string`: The type of selected payment method.
   - **details** |`map<string, string>`: Additional information required to process the selected payment method.
   - **flow** |`string`: Specifies the payment flow to be initiated for the selected payment method.
   - **tokenReference** |`string`: Unique reference to the store token details.
