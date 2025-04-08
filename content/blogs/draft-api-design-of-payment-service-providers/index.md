@@ -144,24 +144,21 @@ Fields to hold data used to authenticate the transaction.
 - **Authentication**
   - **AccountInfo**
     - **accountAgeIndicator** |`string`: Indicates how long the cardholder's account has existed.
-    - **accountChangeDate** |`date|YYYY-MM-DD `: The last date when account details (e.g., email, phone, name) were modified.
+    - **accountChangeDate** |`date|YYYY-MM-DD`: The last date when account details (e.g., email, phone, name) were modified.
     - **accountChangeIndicator** |`string`: Indicates when the account details were last changed.
-    - **accountCreatedDate** |`date|YYYY-MM-DD `: The exact date when the cardholder's account was created.
-    - **accountPasswordChangeDate** |`date|YYYY-MM-DD `: The last date when the cardholder changed their password.
+    - **accountCreatedDate** |`date|YYYY-MM-DD`: The exact date when the cardholder's account was created.
+    - **accountPasswordChangeDate** |`date|YYYY-MM-DD`: The last date when the cardholder changed their password.
     - **accountPasswordChangeIndicator** |`string`: Indicates when the cardholder last changed their account password.
-    - **addressMatch** |`bool`: Whether the chosen delivery address is identical to the billing address.
-    - **deliveryAddressIndicator** |`string`: Indicator regarding the delivery address.
     - **paymentAccountAgeIndicator** |`string`: Indicates how long the payment account (e.g., card registration) has existed.
     - **purchaseLast6Months** |`integer`: Number of successful purchases made with this account in the past 6 months.
-    - **shippingAddressFirstUseDate** |`date|YYYY-MM-DD `: The first date when this shipping address was used for a transaction.
+    - **shippingAddressFirstUseDate** |`date|YYYY-MM-DD`: The first date when this shipping address was used for a transaction.
     - **shippingAddressUsageIndicator** |`string`: Indicates how long the shipping address has been on file.
     - **suspiciousAccountActivity** |`bool`: Indicates whether suspicious activity has been detected on the account.
     - **transactionsLastDay** |`integer`: The total number of transaction attempts using this card in the last 24 hours.
     - **transactionsLastYear** |`integer`: The total number of transaction attempts using this card in the past 12 months.
   - **ThreeDS**
-    - **challengeWindowSize** |`string`: Indicates preferred size of the 3DS2 challenge window.
     - **challengeWindowSize** |`string`: The size of the challenge window displayed to the shopper in the challenge flow.
-    - **dataOnly** |`string`: Indicates whether to perform data only flow.
+    - **dataOnly** |`bool`: Indicates whether to perform data only flow.
     - **nativeThreeDS** |`string`: Indicates if native 3D Secure authentication should be used when available.
     - **scaExemption** |`string`: Indicates the exemption type that you want to request for the particular transaction.
     - **version** |`string`: Indicates your preference for the 3D Secure version.
@@ -222,7 +219,7 @@ Fields related to fund used in the transaction.
 ```markmap{height="40px"}
 - **Fund**
   - **origin** |`string`: The person or entity funding the money.
-  - **recipient** |`string`: The person or entity receiving the money
+  - **recipient** |`string`: The person or entity receiving the money.
 ```
 
 #### Forex
@@ -230,9 +227,9 @@ Fields related multi-currency payment.
 ```markmap{height="150px"}
 - **Forex**
   - **baseAmount** |`amount`: The base amount.
-  - **basePoint** |`integer`:The base amount.
+  - **basePoint** |`integer`: The base points.
   - **buyRate** |`amount`: The buy rate.
-  - **interbank** |`amount`: The interbank amount.
+  - **interbankRate** |`amount`: The interbank amount.
   - **sellRate** |`amount`: The sell rate.
   - **source** |`string`: The source of the forex quote.
   - **type** |`string`: The type of forex.
@@ -355,14 +352,35 @@ Fields related to the payment method used in the transaction.
 ```markmap{height="100px"}
 - **PaymentMethod**
   - **code** |`string`: A unique identifier representing the selected payment method.
+  - **details** |`map<string, string>`: Additional information required to process the selected payment method.
   - **flow** |`string`: Specifies the payment flow to be initiated for the selected payment method.
-  - **details** |`map<string, string>`: A key-value map containing any additional information required to process the selected payment method.
+  - **tokenReference** |`string`: Unique reference to the store token details.
 ```
+
+{{< spoiler text="Card Details" >}}
+```markmap{height="100px"}
+- **Card**
+  - **number** |`string`: Card number.
+  - **expiryYear** |`string`: Card expiry year.
+  - **expiryMonth** |`string`: Card expiry month.
+  - **holderName** |`string`: Card holder name.
+  - **cvc** |`string`: Card verification code.
+```
+{{< /spoiler >}}
+
+{{< spoiler text="UPI Details" >}}
+```markmap{height="100px"}
+- **UPI**
+  - **virtualPaymentAddress** |`string`: Virtual payment address.
+```
+{{< /spoiler >}}
 
 #### Risk
 Fields related to risk data of the transaction.
 ```markmap{height="100px"}
 - Risk
+  - **addressMatch** |`bool`: Indicates whether the billing address matches the cardholder's address on file.
+  - **deliveryAddressIndicator** |`string`: Describes whether the shipping address is the same as the billing address.
   - **fraudOffset** |`integer`: An integer value that is added to the normal fraud score. The value can be either positive or negative.
 ```
 
@@ -372,7 +390,6 @@ Fields related to tokenize the payment methods for future use.
 - **Tokenization**
   - **enableOneClick** |`bool`: Indicates whether to store the payment details for future one-click payments. 
   - **enableRecurring** |`bool`: Indicates whether to store the payment details for future recurring payments.
-  - **tokenReference** |`string`: Unique reference to the store token details.
 ```
 
 #### Shopper
@@ -425,12 +442,12 @@ Query parameters are not so commonly used in PSPs. But it can be potentially use
 ### Address
 ```markmap{height="150px"}
 - Address
-  - **country** |`string`: Country.
-  - **state** |`string`: State/Province/Region.
-  - **city** |`string`: City.
-  - **street** |`string`: Street Address
   - **building** |`string`: Postal/ZIP Code.
+  - **city** |`string`: City.
+  - **country** |`string`: Country.
   - **postalCode** |`string`: Postal/ZIP Code.
+  - **state** |`string`: State/Province/Region.
+  - **street** |`string`: Street Address
 ```
 
 ### Amount
