@@ -70,6 +70,7 @@ Designing a payment orchestrator means creating a system that intelligently rout
 * As a **Merchant**, **I want** all providers to trigger consistent events, **so that** I don’t have to manage provider-specific logic.
 * As a **Merchant**, **I want** to initiate refunds or track disputes through a single system, **so that** I can resolve customer issues quickly.
 * As a **Merchant**, **I want** to see dispute history and status across all PSPs, **so that** I can manage chargebacks effectively.
+* As a **Merchant**, **I want** the ability to customize field mappings from a predefined template, **so that** I can easily adapt it to my specific business needs.
 
 ### Reconciliation & Reporting
 * As a **Finance Team Member**, **I want** automated reconciliation between transactions and settlements, **so that** that accounting discrepancies are flagged early.
