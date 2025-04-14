@@ -395,7 +395,7 @@ Fields related to tokenize the payment methods for future use.
 Fields related to the shopper.
 ```markmap{height="200px"}
 - **Shopper**
-  - **countryCode** |`string`: The shopper country code in ISO 3166-1 alpha-2 format.
+  - **country** |`string`: The shopper country code in ISO 3166-1 alpha-2 format.
   - **dateOfBirth** |`date|YYYY-MM-DD`: The shopper's date of birth.
   - **email** |`string`: The shopper's email address.
   - **firstName** |`name`: The shopper's first name.
@@ -443,7 +443,7 @@ Query parameters are not so commonly used in PSPs. But it can be potentially use
 - Address
   - **building** |`string`: Postal/ZIP Code.
   - **city** |`string`: City.
-  - **country** |`string`: Country.
+  - **country** |`string`: Country code in ISO 3166-1 alpha-2 format.
   - **postalCode** |`string`: Postal/ZIP Code.
   - **state** |`string`: State/Province/Region.
   - **street** |`string`: Street Address
