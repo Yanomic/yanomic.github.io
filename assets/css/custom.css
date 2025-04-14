@@ -35,7 +35,7 @@ div.markmap {
     background: var( --markmap-bg) ;
 }
 
-.prose :where(code) {
+.prose :where(code):not(:where([class])){
     font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     font-weight: unset;
     background-color: var(--color-bg-inline-code);
