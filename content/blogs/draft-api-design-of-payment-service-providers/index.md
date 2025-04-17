@@ -78,15 +78,15 @@ The ideal API should be well-structured, consistent, extensibility, backward/for
 ### Headers
 Headers are key-value pairs that provide metadata about the request or response. 
 In terms of HTTP request to PSP, the fields should be used to handle following information:
-* **Authentication**, e.g.,  `Authorization: Bearer {token}`, `X-API-KEY: {api-key} `
+* **Authentication**, e.g., `Authorization: Bearer {token}`, `X-API-KEY: {api-key} `
 * **Content Negotiation**, e.g., `Content-Type: application/json`, `Accept: application/x-www-form-urlencoded`
 * **Idempotency**, e.g., `X-Idempotency-Key: {idempotency-key}`
 * **Merchant/Partner Identifier**, e.g., `X-Merchant-Code: {merchant-code}`, `X-Partner-ID: {partner-id}`
-* **Payload Integrity Validation**, e.g.,  `X-Signature: sha256={signature}`
+* **Payload Integrity Validation**, e.g., `X-Signature: sha256={signature}`
 * **Rate Limiting**, e.g., `X-RateLimit-Limit: {limit}`, `X-RateLimit-Remaining: {remaining}`
 
 {{% callout note %}}
-<div class="mt-1 font-semibold text-lg">Which should not be included</div>
+<div class="mt-1 font-semibold text-lg">Headers to exclude</div>
  
 * **Client information**, e.g., `User-Agent: Mozilla/5.0`
 
@@ -388,7 +388,7 @@ Fields related to risk data of the transaction.
 Fields related to tokenize the payment methods for future use.
 ```markmap{height="100px"}
 - **Tokenization**
-  - **useCases** |`string[]`: Indicates the use cases for the store token.
+  - **useCases** |`string[]`: Indicates the use cases for the stored token.
 ```
 
 #### Shopper
@@ -421,9 +421,9 @@ Fields used to instruct how a payment should be split.
 
 
 ### Path
-Path should used indicate the:
+The request path should indicate the following:
 * **Resource identifier**, e.g., `/payments/{payment_id}`
-* **Versioning**, e.g., `/refunds/{refund_id}`
+* **API versioning**, e.g., `/v1/refunds/{refund_id}`
 * **Action or Sub-Resources**, examples:
   * `/payments/{payment_id}/refunds`, list refunds of a payment
   * `/invoices/{invoice_id}/void`, void an invoice
