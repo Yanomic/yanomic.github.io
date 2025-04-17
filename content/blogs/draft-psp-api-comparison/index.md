@@ -3,7 +3,7 @@ date: 2025-03-20T08:36:34+08:00
 draft: true
 title: Comparison of PSP API Design
 categories:
-    - API Design of Payment Service Providers 
+    - Designing APIs for a Payment Orchestrator 
 tags: 
     - API
     - PSP

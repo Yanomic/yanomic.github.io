@@ -1,9 +1,9 @@
 ---
 date: 2025-03-20T08:36:34+08:00
 draft: true
-title: API Design of Payment Service Providers – Fetching Available Payment Methods
+title: Designing APIs for a Payment Orchestrator – Fetching Available Payment Methods
 categories: 
-  - API Design of Payment Service Providers
+  - Designing APIs for a Payment Orchestrator
 tags: 
   - API
   - PSP

@@ -1,8 +1,8 @@
 ---
 date: 2025-04-14
-title: API Design of Payment Service Providers - Error Handling
+title: Designing APIs for a Payment Orchestrator - Error Handling
 categories: 
-  - API Design of Payment Service Providers
+  - Designing APIs for a Payment Orchestrator
 tags: 
     - API
     - PSP
