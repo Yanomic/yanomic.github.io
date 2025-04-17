@@ -34,6 +34,7 @@ Similar to the [headers used in a payment request](../draft-api-design-of-paymen
   Idempotency keys are used to safely retry state-changing operations such as POST, PUT, or DELETE. Since fetching payment methods is a read-only operation with no side effects, this header is not needed.
 
 * **Caching**, `Cache-Control: no-cache`
+  
   Similar to the initiate request, responses for available payment methods should not be cached to ensure merchants always receive the most up-to-date list.
 {{% /callout %}}
 
@@ -69,23 +70,28 @@ Although query parameters are not frequently utilized in PSP APIs, they can serv
 
 ## The Response
 
-### Response Code
+### HTTP Status Code
 The response code should consistently be `200 OK`.
 
 ### Body
 
-```markmap{height="200px"}
-- Options Response
+```markmap{height="150px"}
+- **Options Response**
   - **altopusId** | `string`: A unique reference for the request.
-  - **options** | `[]option`: A list of available payment options.
+  - **options** | `[]Option`: A list of available payment options.
+```
+Each `Option` contains details of a payment option:
+```markmap{height="150px"}
+- **Option**
     - **variant** | `string`: Unique identifier for the payment variant.
     - **name** | `string`: User-friendly name for the payment method.
     - **tokens** | `[]TokenDetail`: A list of stored tokens associated with this payment variant.
 ```
+
 Each `TokenDetail` provides additional information about a stored token:
 
 ```markmap{height="250px"}  
-- TokenDetail
+- **TokenDetail**
   - **reference** | `string`: The unique identifier for the stored token.
   - **useCases** | `[]string`: Supported use cases for this token.
   - **details** | `map<string, string>`: Additional metadata related to the token.
@@ -93,7 +99,7 @@ Each `TokenDetail` provides additional information about a stored token:
 
 The `details` field contains variant-specific data. Some keys may be shared across variants, such as mandate information.
 
-#### Token detail for card-based methods
+* Token detail for card-based methods
 
 ```markmap{height="200px"}
 - CardTokenDetail
@@ -103,4 +109,51 @@ The `details` field contains variant-specific data. Some keys may be shared acro
   - **summary** | `string`: Last four digits of the card number.
 ```
 
-## Behind the scene
+* (More details to be added)
+
+## Behind the Scene
+
+As a payment orchestrator, we do not offer our own payment methods. Instead, we depend on connected Payment Service Providers (PSPs) to supply them. The orchestrator can only filter and aggregate the available methods that are supported by downstream PSPs. It cannot expose any payment method that does not exist on the PSPs.
+
+If the orchestrator does not cache available payment methods, it would need to query each connected PSP for every incoming options request. While this ensures up-to-date information, it comes at a high operational cost—especially when the merchant is integrated with multiple PSPs. Since payment methods typically don’t change frequently, querying PSPs every time is inefficient.\
+
+A more scalable approach is to cache the available payment methods and return the cached data when responding to the merchant. To keep the cache synchronized with the PSPs, here are three common strategies.
+
+### Webhook-Based Sync
+PSPs send a webhook notification to the orchestrator when their payment method configuration changes.
+
+##### Pros:
+* Real-time updates
+* Minimal network traffic
+* Scales well with many PSPs
+
+
+##### Cons:
+* Depends on PSP support for webhooks
+* Requires reliable retry and failure handling
+* Security and authenticity of webhooks must be managed
+
+### Periodic Polling
+The orchestrator periodically queries PSPs (e.g., every hour) to refresh available payment methods.
+
+##### Pros:
+* Simple and widely compatible
+* No dependency on webhook infrastructure
+
+##### Cons:
+* Delayed updates between intervals
+* Higher traffic overhead
+* Becomes inefficient at scale or with high frequency
+
+### Manual Trigger
+Synchronization is triggered manually, either by the merchant or through internal tools.
+
+
+##### Pros:
+* Low maintenance and operational cost
+* Ideal for rarely changing configurations
+
+##### Cons:
+* Prone to stale data
+* Depends on human intervention or external events
+* Not suitable for dynamic or large-scale environments
