@@ -117,7 +117,7 @@ As a payment orchestrator, we do not offer our own payment methods. Instead, we 
 
 If the orchestrator does not cache available payment methods, it would need to query each connected PSP for every incoming options request. While this ensures up-to-date information, it comes at a high operational cost—especially when the merchant is integrated with multiple PSPs. Since payment methods typically don’t change frequently, querying PSPs every time is inefficient.\
 
-A more scalable approach is to cache the available payment methods and return the cached data when responding to the merchant. To keep the cache synchronized with the PSPs, here are three common strategies.
+A more scalable approach is to cache the available payment methods and return the cached data when responding to the merchant. To keep the cache synchronized with the PSPs, here are a few common strategies.
 
 ### Webhook-Based Sync
 PSPs send a webhook notification to the orchestrator when their payment method configuration changes.
@@ -157,3 +157,16 @@ Synchronization is triggered manually, either by the merchant or through interna
 * Prone to stale data
 * Depends on human intervention or external events
 * Not suitable for dynamic or large-scale environments
+
+### Sync on First Access / Lazy Loading
+Only sync payment methods for a specific merchant or PSP when a request is made and the cache is missing or expired.
+
+##### Pros
+* Reduces unnecessary syncs
+* Efficient for low-traffic or rarely used merchants
+* Works well with TTL-based caching strategies
+
+##### Cons
+* Slower response for first-time or cold cache requests
+* Requires careful expiration and cache invalidation logic
+* Might result in inconsistent experience across merchants
