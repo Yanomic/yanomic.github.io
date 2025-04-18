@@ -44,12 +44,10 @@ In comparison to an initiate payment request, the options request is relatively 
 
 ```markmap{height="250px"}
 - Payload
-    - **allowedPaymentMethods** | `[]string`: A list of payment methods permitted for the shopper.
   - **amount** | `amount`: Details regarding the transaction amount and currency.
-  - **blockedPaymentMethods** | `[]string`: A list of payment methods that should be excluded.
   - **shopperCountry** | `string`: The shopper’s country in ISO 3166-1 alpha-2 format.
   - **shopperLocale** | `string`: A combination of language and country codes to define the locale.
-  - **shopperReference** | `string`: A unique reference identifying the shopper.
+  - **shopperReference** | `string`: A unique reference identifying the shopper. Used to include store tokens in response.
   - **device** | `device`: Information about the device used to initiate the transaction.
 ```
 
@@ -62,7 +60,7 @@ The request path should indicate the following:
 
 ### Query Parameter
 Although query parameters are not frequently utilized in PSP APIs, they can serve specific purposes:
-* **Filtering & Search**, to narrow down results based on specific criteria, e.g., `?type=card`
+* **Filtering & Search**, to narrow down results based on specific criteria, e.g., `?allowed=card,alipay&blocked=upi`
 * **Pagination & Limits**, to control the volume of data returned, e.g., `?limit=50`, `?offset=100`
 * **Sorting & Ordering**, to specify how the data list in results are sorted, e.g., `?sort=type`, `?order=desc`
 
@@ -83,7 +81,7 @@ Each `Option` contains details of a payment option:
 ```markmap{height="150px"}
 - **Option**
     - **variant** | `string`: Unique identifier for the payment variant.
-    - **name** | `string`: User-friendly name for the payment method.
+    - **name** | `string`: User-friendly name for the payment variant.
     - **tokens** | `[]TokenDetail`: A list of stored tokens associated with this payment variant.
 ```
 
@@ -112,60 +110,70 @@ The `details` field contains variant-specific data. Some keys may be shared acro
 
 ## Behind the Scene
 
-As a payment orchestrator, we do not offer our own payment methods. Instead, we depend on connected Payment Service Providers (PSPs) to supply them. The orchestrator can only filter and aggregate the available methods that are supported by downstream PSPs. It cannot expose any payment method that does not exist on the PSPs.
+As a payment orchestrator, we do not offer our own payment methods. Instead, we depend on connected Payment Service Providers (PSPs) to provide these options. The orchestrator's role is to aggregate and filter the methods available from the PSPs; it cannot expose any methods that are not supported by them.
 
-If the orchestrator does not cache available payment methods, it would need to query each connected PSP for every incoming options request. While this ensures up-to-date information, it comes at a high operational cost—especially when the merchant is integrated with multiple PSPs. Since payment methods typically don’t change frequently, querying PSPs every time is inefficient.\
+If the orchestrator does not cache the available methods, it must query each PSP for every incoming options request. While this ensures real-time accuracy, it results in significant operational overhead, particularly when a merchant is integrated with multiple PSPs. Since payment methods typically change infrequently, this approach can be inefficient.
 
 A more scalable approach is to cache the available payment methods and return the cached data when responding to the merchant. To keep the cache synchronized with the PSPs, here are a few common strategies.
 
 ### Webhook-Based Sync
 PSPs send a webhook notification to the orchestrator when their payment method configuration changes.
 
-##### Pros:
+**Pros:**
 * Real-time updates
 * Minimal network traffic
-* Scales well with many PSPs
+* Scales effectively with multiple PSPs
 
 
-##### Cons:
-* Depends on PSP support for webhooks
-* Requires reliable retry and failure handling
-* Security and authenticity of webhooks must be managed
+**Cons:**
+* Relies on PSPs supporting webhooks
+* Requires reliable error handling and retry mechanisms
+* Necessitates secure verification and authentication
 
 ### Periodic Polling
-The orchestrator periodically queries PSPs (e.g., every hour) to refresh available payment methods.
+The orchestrator periodically queries each PSP (e.g., hourly) to refresh the available payment method configurations.
 
-##### Pros:
-* Simple and widely compatible
-* No dependency on webhook infrastructure
+**Pros:**
+* Easy to implement
+* No reliance on webhook infrastructure
 
-##### Cons:
-* Delayed updates between intervals
-* Higher traffic overhead
-* Becomes inefficient at scale or with high frequency
+**Cons:**
+* Data may become outdated between polling intervals
+* Increased load if polling frequency is high
+* Less efficient with a large number of PSPs
 
 ### Manual Trigger
-Synchronization is triggered manually, either by the merchant or through internal tools.
+Synchronization is initiated manually, either by the merchant or through internal tools.
 
-
-##### Pros:
+**Pros:**
 * Low maintenance and operational cost
-* Ideal for rarely changing configurations
+* Suitable for configurations that change infrequently
 
-##### Cons:
-* Prone to stale data
-* Depends on human intervention or external events
-* Not suitable for dynamic or large-scale environments
+**Cons:**
+* Risk of stale or outdated data
+* Dependent on human intervention
+* Not ideal for dynamic or rapidly changing environments
 
 ### Sync on First Access / Lazy Loading
-Only sync payment methods for a specific merchant or PSP when a request is made and the cache is missing or expired.
+The orchestrator synchronizes payment methods on demand—only when a merchant or PSP is accessed and the cache is missing or expired.
 
-##### Pros
-* Reduces unnecessary syncs
-* Efficient for low-traffic or rarely used merchants
-* Works well with TTL-based caching strategies
+**Pros:**
+* Minimizes unnecessary synchronization
+* Efficient for merchants with low traffic
+* Works well with time-to-live (TTL) based caching strategies
 
-##### Cons
-* Slower response for first-time or cold cache requests
-* Requires careful expiration and cache invalidation logic
-* Might result in inconsistent experience across merchants
+**Cons:**
+* Slower response for the first request (cold start)
+* Requires careful management of cache expiration and invalidation
+* Potential for inconsistent experiences if merchants receive updates at different times
+
+
+## Token Vault
+Tokens can be stored on either the orchestrator's side, the PSP's side, or in some cases, a combination of both.
+
+The main benefit of storing tokens within the orchestrator is enhanced interoperability. For example, in a Card-on-File (COF) scenario, if card details are kept with the orchestrator, it can direct the transaction to the most suitable PSP (assuming that PSP supports the card brand). If the first attempt fails, the orchestrator has the option to retry with a different PSP, which can enhance overall reliability and success rates.
+
+However, this advantage comes with limitations. Its effectiveness depends heavily on the broader payment ecosystem’s support for interoperability. In practice, such flexibility is generally supported by major card schemes, while alternative and bank-based payment methods offer limited or no support.
+
+Most importantly, since PSPs interact directly with banks or wallets, the tokens they create are typically only usable through that specific PSP. Furthermore, many PSPs do not disclose or share the actual token generated at the scheme, issuer, or wallet level, which further restricts the orchestrator's ability to operate independently.
+
