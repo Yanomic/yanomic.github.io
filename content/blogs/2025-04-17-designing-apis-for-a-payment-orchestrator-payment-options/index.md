@@ -154,6 +154,8 @@ Synchronization is initiated manually, either by the merchant or through interna
 * Dependent on human intervention
 * Not ideal for dynamic or rapidly changing environments
 
+The manual trigger will be covered in more detail in the dedicated [section](#trigger-options-synchronization) below.
+
 ### Sync on First Access / Lazy Loading
 The orchestrator synchronizes payment methods on demand—only when a merchant or PSP is accessed and the cache is missing or expired.
 
@@ -176,4 +178,6 @@ The main benefit of storing tokens within the orchestrator is enhanced interoper
 However, this advantage comes with limitations. Its effectiveness depends heavily on the broader payment ecosystem’s support for interoperability. In practice, such flexibility is generally supported by major card schemes, while alternative and bank-based payment methods offer limited or no support.
 
 Most importantly, since PSPs interact directly with banks or wallets, the tokens they create are typically only usable through that specific PSP. Furthermore, many PSPs do not disclose or share the actual token generated at the scheme, issuer, or wallet level, which further restricts the orchestrator's ability to operate independently.
+
+## Trigger Options Synchronization
 

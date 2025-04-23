@@ -111,3 +111,7 @@ and, when in error(HTTP 400):
 There’s no definitive right or wrong choice between the two approaches—what works best depends on the specific use case. In some scenarios, combining elements of both can be beneficial—for example, applying HTTP semantics while using a consistent response structure . 
 
 However, this hybrid model can lead to confusion if developers focus only on indicators like a success flag and ignore the actual HTTP status code.
+
+
+## Reference
+* [RFC 9457 Problem Details for HTTP APIs](https://tools.ietf.org/html/rfc9457)
