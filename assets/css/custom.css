@@ -8,6 +8,18 @@
     display: none;
 }
 
+.text-base {
+    font-size: 0.8rem !important;
+}
+
+.max-w-prose {
+    max-width: 680px;
+}
+
+.bio-text {
+    max-width: 800px !important;
+}
+
 .prose{
     font-size: 1.0em;
     line-height: 1.5;

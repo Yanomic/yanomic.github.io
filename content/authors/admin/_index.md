@@ -38,6 +38,7 @@ profiles:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/yan-hai-a87105134/
 
+# https://docs.google.com/document/d/1TgRTecBHQWO3GedX06HNCOmCM2efL8Qu9hrETN5v-tg/edit?tab=t.0
 education:
   - area: Computer Technology
     institution: Master's degree • Nanjing University • Nanjing, China
@@ -54,28 +55,42 @@ work:
     company_logo: ''
     date_start: 2022-09-01
     date_end: ''
-    summary: ''
+    summary: |
+      * Led the successful adoption of Scrum to enhance development efficiency and cross-team collaboration, strategically rolling out tailored agile practices that matched the team’s evolving maturity - boosted delivery velocity and effectiveness, resulting in recognition as the top-performing team within the function group.
+      * Defined and aligned OKRs with stakeholders, taking full ownership of key results and driving execution with clarity and accountability — garnering cross-functional recognition for fostering focus and measurable impact.
+      * Mentored and empowered team members to lead global engineering initiatives, including the decomposition of monolithic systems and implementation of monitoring metrics for alternative and bank-based payments — demonstrating strong technical leadership and deep understanding of business needs.
   - position: Full Stack Java Developer
     company_name: Adyen • Singapore
     company_url: 'https://www.adyen.com/'
     company_logo: ''
     date_start: 2019-08-01
     date_end: 2022-08-31
-    summary: ''
+    summary: |
+      *	Led the end-to-end development of two India-specific payment integrations, enabling seamless processing of Alternative, Bank, and Card payments within the region.
+      * Drove key compliance initiatives such as token localization and data purging, managing the full migration of tokens from global to India infrastructure.
+      * Contributed significantly to various APAC payment integrations by crafting scalable technical solutions that supported the entire payment lifecycle — from onboarding to settlement.
   - position: Manager
     company_name: Works Applications • Singapore
     company_url: 'https://www.worksap.com/'
     company_logo: ''
     date_start: 2018-07-01
     date_end: 2019-07-31
-    summary: ''
+    summary: |
+      * Designed and implemented microservices structured around business domains, leveraging Spring Cloud and Kafka to enable reliable, real-time communication and improve system robustness.
+      * Spearheaded the transformation of a monolithic local payroll solution into a distributed microservices architecture. 
+      * Leveraged Docker for containerization and implemented Kubernetes for streamlined orchestration, monitoring, and lifecycle management.
+      * Developed an extensible framework capable of defining, validating, and managing jurisdiction-specific data while maintaining full compatibility with legacy legal forms and submission portals.
   - position: Software Engineer
     company_name: Works Applications • Shanghai, China
     company_url: 'https://www.worksap.com/'
     company_logo: ''
     date_start: 2014-08-01
     date_end: 2018-06-30
-    summary: ''
+    summary: |
+      * Successfully led the end-to-end development of a new payroll product for the Thailand market, built from scratch to meet local compliance and operational needs. 
+      * Enhanced legacy systems with limited documentation by introducing extensible architecture and custom DSL enhancements, improving system flexibility and supporting overseas expansion. 
+      * Drove automation initiatives using Selenium and Jenkins, and significantly improved code quality through peer reviews and code smell detection. 
+      * Proactively collaborated in Agile teams, consistently aligning technical solutions with business goals and taking full ownership from design through deployment.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -101,10 +116,10 @@ skills:
         icon: custom/sleep
   - name: Languages
     items:
-      - name: Mandarin
-        icon: custom/lang-zh
       - name: English
         icon: custom/lang-en
+      - name: Mandarin
+        icon: custom/lang-zh
       - name: Silence
         icon: custom/mute
 ---
