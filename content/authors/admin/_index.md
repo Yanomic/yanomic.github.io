@@ -49,7 +49,7 @@ education:
     date_start: 2006-09-01
     date_end: 2010-07-31
 work:
-  - position: Team Lead - APM SG
+  - position: Team Lead - Alternative SG
     company_name: Adyen • Singapore
     company_url: 'https://www.adyen.com/'
     company_logo: ''
@@ -124,8 +124,7 @@ skills:
         icon: custom/mute
 ---
 
-As an engineer, I have deep expertise in the payment ecosystem, solving transaction pain points and building seamless, cross-border solutions. I’m passionate about designing systems that improve user experience and drive efficiency.
-
-As a tech enthusiast, I focus on backend architecture—messaging systems, microservices, databases, caching, and containers—prioritizing practical, reliable solutions over hype.
-
-As a lead, I’ve managed diverse, distributed teams, balancing priorities, collaborating cross-functionally, and delivering on my commitments. My adaptable leadership style helps teams thrive and achieve meaningful results.
+**Engineering leader** with deep expertise in designing and delivering **scalable**, **high-performance systems** in the **payments domain**. 
+Experienced in solving **complex technical challenges** while aligning solutions with **business goals**. 
+Focused on **reliability**, **maintainability**, and **long-term architectural integrity**. 
+Proven ability to lead **distributed teams**, balance **competing priorities**, and drive **business impact** by optimizing systems for **scale** and consistently delivering **high-value outcomes**.
