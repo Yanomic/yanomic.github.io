@@ -85,13 +85,29 @@ As you can see, the TinyGo binary is dramatically smaller—less than `4%` of th
 
 
 ## Finishing the Setup
+### Install Arduino IDE
+* Download and install the [Arduino IDE](https://www.arduino.cc/en/software).
+* Launch the IDE and navigate to **Tools > Board > Board Manager**
+* In the search bar, enter `uno` or `uno r4`, then locate:
+	* **Arduino AVR Boards** (for Uno R3 and similar), or
+	* **Arduino Renesas UNO R4 Boards** (for Uno R4 Minima and WiFi)
+* Click Install next to the appropriate package.
+* After installation, go to Tools > Board and select the board you’re using.
+
 ### Install Dependencies for AVR-Based Microcontrollers
-To compile programs for AVR microcontrollers (like Arduino Uno), you’ll need to install a few additional tools. Run the following commands:
+To compile programs for AVR microcontrollers (like Arduino Uno R3), you’ll need to install a few additional tools. Run the following commands:
 ```bash
 brew tap osx-cross/avr
 brew install avr-gcc
 brew install avrdude
 ```
+### Install Dependencies for ARM-Based Microcontrollers
+To compile and upload programs to ARM-based boards such as the Arduino Uno R4, install the ARM GCC toolchain. Run the following command:
+```bash
+brew install arm-none-eabi-gcc
+```
+
+
 
 ### Setting Up VS Code Integration
 * Go Extension
