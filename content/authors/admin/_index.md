@@ -104,14 +104,14 @@ skills:
         icon: custom/frontend
       - name: Never-end
         icon: custom/neverend
-  - name: Stack
+  - name: Interests
     items:
       - name: Software
         icon: custom/software
       - name: Hardware
         icon: custom/hardware
-      - name: Anywhere
-        icon: custom/anywhere
+      - name: Peopleware
+        icon: custom/peopleware
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
