@@ -16,8 +16,8 @@ tags:
 {{< /spoiler >}}
 
 ## System Specifications
-* Hardware: MacBook Pro w/ Apple M3 Pro
-* System: macOS 15.4.1 (24E263)
+* Hardware: MacBook Pro with Apple M3 Pro
+* System: macOS 15.4.1
 
 
 ## Why Go and TinyGo
@@ -26,6 +26,7 @@ tags:
 [TinyGo](https://tinygo.org/) is a new compiler for the [Go](https://go.dev/)  programming Language, designed to bring Go to embedded systems and WebAssembly. It compiles Go code into much smaller binaries and supports a broader range of platforms, making it ideal for resource-constrained environments.
 
 ## Install Go and TinyGo
+Use the following commands to install Go and TinyGo on macOS:
 ```bash
 # Go, https://go.dev/doc/install
 brew install go
@@ -34,7 +35,7 @@ go version
 brew tap tinygo-org/tools
 brew install tinygo
 ```
-The version used through out the tutorial.
+Here are the versions used throughout this tutorial:
 ```bash
 $ go version
 go version go1.24.0 darwin/arm64
