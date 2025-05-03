@@ -16,6 +16,9 @@
     max-width: 680px;
 }
 
+.skills-icon {
+    margin-bottom: -0.15em;
+
 .bio-text {
     max-width: 800px !important;
 }
