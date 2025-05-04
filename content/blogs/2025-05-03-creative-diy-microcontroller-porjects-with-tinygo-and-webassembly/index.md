@@ -1,6 +1,6 @@
 ---
 date: 2025-05-03T17:54:33+08:00
-draft: false
+draft: true
 title: Getting Started with TinyGo
 categories: 
   - Creative DIY Microcontroller Project with TinyGo adn WebAssembly
@@ -106,8 +106,6 @@ To compile and upload programs to ARM-based boards such as the Arduino Uno R4, i
 ```bash
 brew install arm-none-eabi-gcc
 ```
-
-
 
 ### Setting Up VS Code Integration
 * Go Extension
