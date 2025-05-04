@@ -10,11 +10,43 @@ tags:
     - TinyGo
     - WebAssembly
 ---
+
+
+
+{{% callout note %}}
+<div class="mt-1 font-semibold text-lg">Limitation of TinyGo on Arduino</div>
+
+TinyGo is currently not suitable for projects requiring:
+* Wireless communication (Wi-Fi, Bluetooth)
+* USB peripherals beyond basic serial
+* Filesystems or media (SD cards, audio, video)
+* Networking or IoT protocols (MQTT, HTTP)
+* Complex sensor stacks or 3rd-party hardware libraries
+
+### TinyGo Feature Support on Arduino Boards
+
+| Feature                           | TinyGo Support                         | C++ (Arduino) Support                    | Notes                                                 |
+|-----------------------------------|----------------------------------------|------------------------------------------|-------------------------------------------------------|
+| **Wi-Fi (e.g., ESP32, Nano 33 IoT)** | ⚠️ Partial support via `nina-fw` firmware | ✅ Full support via libraries (WiFiNINA, ESP32 WiFi) | Requires specific firmware; limited functionality |
+| **Bluetooth (BLE)**              | ✅ Supported on select boards           | ✅ Supported on boards like Nano 33 BLE  | Requires `nina-fw` firmware and supported hardware |
+| **USB (as host or device)**      | ⚠️ Basic serial USB only               | ✅ Full USB HID, MIDI, mass storage, etc. | HID, keyboard/mouse emulation not supported          |
+| **Networking Libraries**         | ⚠️ Limited support                     | ✅ Wide variety: MQTT, HTTP, WebSockets   | No `net/http` or TCP stack in TinyGo                 |
+| **OTA (Over-the-Air updates)**   | ❌ Not supported                        | ✅ Available on many WiFi-capable boards  | Crucial for remote firmware updates                  |
+| **Audio / DAC / I2S**            | ❌ Not supported                        | ✅ Fully supported (e.g., PCM, WAV playback) | No support for audio interfaces                  |
+| **Camera / Display Drivers**     | ⚠️ Limited support                     | ✅ Extensive (TFT, OLED, camera modules)  | Limited driver availability in TinyGo                |
+| **File System (SD, SPIFFS)**     | ✅ Supported via TinyFS                 | ✅ Full support for SD cards, flash FS    | Requires additional setup and supported hardware     |
+| **Sensor Libraries**             | ✅ Supported via drivers                | ✅ Thousands available (e.g., MPU6050)     | Growing collection of drivers in TinyGo              |
+| **Interrupt Priorities / Nested IRQs** | ⚠️ Basic support                  | ✅ Supported via register control         | Limited configurability in TinyGo                    |
+| **Real-Time OS (RTOS)**          | ❌ Not supported                        | ✅ Available via FreeRTOS, ChibiOS        | No threading, mutexes, or RTOS APIs                 |
+
+
+{{% /callout %}}
+
+
 {{< spoiler text="Source Code" >}}
 
 [creative-diy-microcontroller-project-with-tinygo-adn-webassembly/ch01/](https://github.com/Yanomic/creative-diy-microcontroller-project-with-tinygo-adn-webassembly/blob/main/ch01/)
 {{< /spoiler >}}
-
 ## System Specifications
 * Hardware: MacBook Pro with Apple M3 Pro
 * System: macOS 15.4.1
