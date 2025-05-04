@@ -121,4 +121,3 @@ brew install arm-none-eabi-gcc
 
 ## Reference
 * [TinyGo](https://tinygo.org/)
-* [Floating Pin Explained](https://www.youtube.com/watch?v=6U9l8U2kPfQ)
