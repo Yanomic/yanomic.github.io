@@ -1,5 +1,5 @@
 ---
-date: 2025-05-03T17:54:33+08:00
+date: 2025-05-04T06:27:46+08:00
 draft: false
 title: Getting Started with Arduino
 categories: 
@@ -10,11 +10,6 @@ tags:
     - TinyGo
     - WebAssembly
 ---
-{{< spoiler text="Source Code" >}}
-
-[creative-diy-microcontroller-project-with-tinygo-adn-webassembly/ch01/](https://github.com/Yanomic/creative-diy-microcontroller-project-with-tinygo-adn-webassembly/blob/main/ch02/)
-{{< /spoiler >}}
-
 ## System Specifications
 * Hardware: MacBook Pro with Apple M3 Pro
 * System: macOS 15.4.1
@@ -37,9 +32,6 @@ UNO R4 provides modern performance while keeping the familiar form factor of the
 
 
 ![UNO R4 WiFi Pinout](img/uno-r4-wifi.png)
- 
-
-## First Project
 
 
 ## 
