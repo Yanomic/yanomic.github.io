@@ -1,7 +1,7 @@
 ---
 date: 2025-05-05T17:21:43+08:00
 draft: false
-title: The Language Reference
+title: The Language Reference - Basics
 categories: 
   - Getting Started with Arduino
 tags:
