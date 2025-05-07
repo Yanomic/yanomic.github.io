@@ -1,5 +1,5 @@
 ---
-date: 2025-05-05T17:21:43+08:00
+date: 2025-05-06T09:58:55+08:00
 draft: false
 title: The Language Reference - Functions
 categories: 
@@ -478,6 +478,7 @@ The API listed in the language reference is a common API that is written to acco
 
 ### [WiFi Network](https://docs.arduino.cc/language-reference/en/functions/wifi/wificlass/)
 The `WiFi` class contains Wi-Fi specific functions such as initializing the network settings as well as connecting to & disconnecting from a network.
+
 
 
 ## Reference
