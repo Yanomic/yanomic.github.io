@@ -479,7 +479,65 @@ The API listed in the language reference is a common API that is written to acco
 ### [WiFi Network](https://docs.arduino.cc/language-reference/en/functions/wifi/wificlass/)
 The `WiFi` class contains Wi-Fi specific functions such as initializing the network settings as well as connecting to & disconnecting from a network.
 
+* `WiFi.begin()`: Initializes the WiFi library's network settings and provides the current status.
+* `WiFi.disconnect()`: Disconnects the WiFi shield from the current network.
+* `WiFi.config()`: Configures a static IP address as well as change the DNS, gateway, and subnet addresses on the WiFi shield.
+* `WiFi.setDNS()`: Configures the DNS (Domain Name System) server.
+* `WiFi.SSID()`: Gets the SSID of the current network.
+* `WiFi.BSSID()`: Gets the MAC address of the router you are connected to.
+* `WiFi.RSSI()`: Gets the signal strength of the connection to the router.
+* `WiFi.encryptionType()`: Gets the encryption type of the current network.
+* `WiFi.scanNetworks()`: Scans for available WiFi networks and returns the discovered number.
+* `WiFi.status()`: Returns the connection status.
+* `WiFi.getSocket()`: Gets the first socket available.
+* `WiFi.macAddress()`: Gets the MAC Address of your WiFi shield.
 
+### [IPAddress](https://docs.arduino.cc/language-reference/en/functions/wifi/ipaddress/)
+The `IPAddress` class contains methods to access the local IP address, gateway IP address and subnet mask.
+
+* `IPAddress.localIP()`: Gets the WiFi shield's IP address.
+* `IPAddress.subnetMask()`: Gets the WiFi shield's subnet mask.
+* `IPAddress.gatewayIP()`: Gets the WiFi shield's gateway IP address.
+
+
+### [WiFiClient](https://docs.arduino.cc/language-reference/en/functions/wifi/client/)
+The `WiFiClient` class is used to connect, send and receive data to and from servers.
+
+* `client.connected()`: Whether or not the client is connected.
+* `client.connect()`: Connect to the IP address and port.
+* `client.write()`: Write data to the server the client is connected to.
+* `client.print()`: Print data to the server that a client is connected to.
+* `client.println()`: Print data, followed by a carriage return and newline, to the server a client is connected to. 
+* `client.available()`: Returns the number of bytes available for reading (that is, the amount of data that has been written to the client by the server it is connected to).
+* `client.read()`: Read the next byte received from the server the client is connected to (after the last call to read()).
+* `client.flush()`: Discard any bytes that have been written to the client but not yet read.
+* `client.stop()`: Disconnect from the server.
+
+### [WiFiServer](https://docs.arduino.cc/language-reference/en/functions/wifi/server/)
+The `WiFiServer` is used for server based calls, such as creating server that listens to a specific port, or writing data to connected clients.
+
+* `server.begin()`: Tells the server to begin listening for incoming connections.
+* `server.available()`: Gets a client that is connected to the server and has data available for reading.
+* `server.write()`: Write data to all the clients connected to a server.
+* `server.print()`: Print data to all the clients connected to a server. Prints numbers as a sequence of digits, each an ASCII character (e.g. the number 123 is sent as the three characters '1', '2', '3').
+* `server.println()`: Prints data, followed by a newline, to all the clients connected to a server. 
+
+
+### [WiFiUDP](https://docs.arduino.cc/language-reference/en/functions/wifi/udp/)
+The `WiFiUDP` class is used send and receive UDP messages over Wi-Fi.
+
+* `WiFiUDP.begin()`: Initializes the WiFi UDP library and network settings. Starts WiFiUDP socket, listening at local port.
+* `WiFiUDP.available()`: Get the number of bytes (characters) available for reading from the buffer.
+* `WiFiUDP.beginPacket()`: Starts a connection to write UDP data to the remote connection.
+* `WiFiUDP.endPacket()`: Called after writing UDP data to the remote connection. It finishes off the packet and send it.
+* `WiFiUDP.write()`: Writes UDP data to the remote connection. Must be wrapped between `beginPacket()` and `endPacket()`. `beginPacket()` initializes the packet of data, it is not sent until `endPacket()` is called.
+* `WiFiUDP.parsePacket()`: It starts processing the next available incoming packet, checks for the presence of a UDP packet, and reports the size. parsePacket() must be called before reading the buffer with `WiFiUDP.read()`.
+* `WiFiUDP.peek()`: Read a byte from the file without advancing to the next one. That is, successive calls to `peek()` will return the same value, as will the next call to `read()`.
+* `WiFiUDP.read()`: Reads UDP data from the specified buffer. If no arguments are given, it will return the next character in the buffer.
+* `WiFiUDP.flush()`: Discard any bytes that have been written to the client but not yet read.
+* `WiFiUDP.stop()`: Disconnect from the server. Release any resource being used during the UDP session.
+* `WiFiUDP.remoteIP()`: Gets the IP address of the remote connection. This function must be called after `WiFiUDP.parsePacket()`.
+* `WiFiUDP.remotePort()`: Gets the port of the remote UDP connection. This function must be called after `WiFiUDP.parsePacket()`.
 
 ## Reference
 * [Arduino - Language Reference](https://docs.arduino.cc/language-reference/#functions)
