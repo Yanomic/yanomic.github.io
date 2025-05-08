@@ -1,5 +1,5 @@
 ---
-date: 2025-05-07T21:04:47+08:00
+date: 2025-05-08T20:07:22+08:00
 draft: true
 title: Arduino by Examples - Analog Read Serial
 categories: 
@@ -66,7 +66,8 @@ Click `Serial Monitor` button the top right corner(or press `CMD+Shift+M`).
 You should see a steady stream of numbers ranging from `0`-`1023`, correlating to the position of the pot. As you turn your potentiometer, these numbers will respond almost instantly.
 
 
-
+## Snapshot
+// TODO
 
 ## Reference
 * [Analog Read Serial](https://docs.arduino.cc/built-in-examples/basics/AnalogReadSerial/)
