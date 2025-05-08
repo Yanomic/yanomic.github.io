@@ -1,7 +1,7 @@
 ---
 date: 2025-05-07T21:04:47+08:00
-draft: true
-title: Arduino by Examples
+draft: false
+title: Arduino by Examples - Preparation
 categories: 
   - Getting Started with Arduino
 tags:
@@ -12,7 +12,9 @@ tags:
 ## System Specifications
 * **Hardware**: MacBook Pro with Apple M3 Pro
 * **System**: macOS 15.4.1
-* **Board**: Arduino UNO R4 WiFi
+* **Board**: [Arduino UNO R4 WiFi](https://docs.arduino.cc/hardware/uno-r4-wifi/)
+* **IDE**: [Arduino IDE 2.3.6](https://www.arduino.cc/en/software/)
+* **EDA Tool**: [fritzing](https://fritzing.org/download/), [Fritzing-1.0.5-2176.dmg](fritzing/Fritzing-1.0.5-2176.dmg), [other versions](https://arduinofactory.fr/en/download-fritzing-for-free/#Is_it_legal_to_download_Fritzing_for_free)
 
 
 ## Introduction to Arduino UNO R4
@@ -32,7 +34,6 @@ UNO R4 provides modern performance while keeping the familiar form factor of the
 
 
 ![UNO R4 WiFi Pinout](img/uno-r4-wifi.png)
-
 
 
 ## Reference
