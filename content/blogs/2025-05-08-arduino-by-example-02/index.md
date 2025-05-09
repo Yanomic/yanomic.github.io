@@ -1,6 +1,6 @@
 ---
 date: 2025-05-08T20:07:22+08:00
-draft: true
+draft: false
 title: Arduino by Examples - Analog Read Serial
 categories: 
   - Getting Started with Arduino
@@ -50,7 +50,6 @@ Connect the three wires from the potentiometer to your board. The first goes fro
 void setup() {
   // begin serial communications, at 9600 bits of data per second, between the board and the computer
   Serial.begin(9600);
-
 }
 
 void loop() {
