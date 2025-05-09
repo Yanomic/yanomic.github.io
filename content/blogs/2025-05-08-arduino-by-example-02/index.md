@@ -38,12 +38,6 @@ Connect the three wires from the potentiometer to your board. The first goes fro
 </div>
 </div>
 
-### How it Works
-* By turning the shaft of the potentiometer, you change the amount of resistance on either side of the wiper, which is connected to the center pin of the potentiometer. 
-* This changes the voltage at the center pin. When the resistance between the center and the side connected to 5 volts is close to zero (and the resistance on the other side is close to 10k ohm), the voltage at the center pin nears 5 volts. 
-* When the resistances are reversed, the voltage at the center pin nears 0 volts, or ground. This voltage is the analog voltage that you're reading as an input.
-
-
 ## Code
 
 ```cpp
@@ -63,6 +57,12 @@ void loop() {
 
 Click `Serial Monitor` button the top right corner(or press `CMD+Shift+M`). 
 You should see a steady stream of numbers ranging from `0`-`1023`, correlating to the position of the pot. As you turn your potentiometer, these numbers will respond almost instantly.
+
+
+## How it Works
+* By turning the shaft of the potentiometer, you change the amount of resistance on either side of the wiper, which is connected to the center pin of the potentiometer. 
+* This changes the voltage at the center pin. When the resistance between the center and the side connected to 5 volts is close to zero (and the resistance on the other side is close to 10k ohm), the voltage at the center pin nears 5 volts. 
+* When the resistances are reversed, the voltage at the center pin nears 0 volts, or ground. This voltage is the analog voltage that you're reading as an input.
 
 
 ## Snapshot

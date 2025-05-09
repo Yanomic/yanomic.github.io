@@ -1,5 +1,5 @@
 ---
-date: 2025-05-09T21:22:09+08:00
+date: 2025-05-09T08:22:09+08:00
 draft: true
 title: Arduino by Examples - Blink
 categories: 
@@ -8,15 +8,16 @@ tags:
   - Arduino
   - Hardware 
 ---
-This example shows the simplest thing you can do with an Arduino to see physical output: it blinks the on-board LED.
+This example shows the simplest thing you can do with an Arduino to see physical output: it blinks the on-board LED or an external LED.
 
 ## Hardware
 * Arduino UNO R4 WiFi
-* LED
-* 220 ohm resistor
+* (optional)LED
+* (optional)220 ohm resistor
 
 ## Circuit
 This example uses the built-in LED that most Arduino boards have. This LED is connected to a digital pin and its number may vary from board type to board type. 
+
 There is a constant, `LED_BUILTIN`, which allows you to control the built-in LED easily. 
 To find out the correspondence between the constant and the digital pin, you can check the user manual of each board.
 For example, in the **Pins** section of [Arduino UNO R4 WiFi](https://docs.arduino.cc/tutorials/uno-r4-wifi/cheat-sheet/), it mentions:
@@ -51,20 +52,37 @@ Adjusting the resistor value allows you to control the LED's brightness while en
 </div>
 <div class="flex-">
 
-![circuit_bb](circuit_bb.png)
+![circuit_bb](fritzing/circuit_bb.png)
 
 </div>
 </div>
-
-### How it Works
-// TODO: Describe how it works
 
 
 ## Code
 
-// TODO: Add the code
+```cpp
+void setup() {
+  // initialize digital pin LED_BUILDIN as an output
+  pinMode(LED_BUILTIN, OUTPUT)
+}
 
-// TODO: Add how to run the code
+void loop() {
+  // turn on the LED
+  digitalWrite(LED_BUILTIN, HIGH)
+  // wait for a second
+  delay(1000)
+  // turn off the LED
+  digitalWrite(LED_BUILTIN, LOW)
+  // wait for a second
+  delay(1000)
+}
+```
+
+
+## How it Works
+The LED blink every second:
+* The LED lights up for 1s
+* The LED turns off for another 1s
 
 ## Snapshot
 // TODO: Add snapshot
