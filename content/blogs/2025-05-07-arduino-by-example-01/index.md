@@ -36,7 +36,17 @@ UNO R4 provides modern performance while keeping the familiar form factor of the
 ![UNO R4 WiFi Pinout](img/uno-r4-wifi.png)
 
 
+## Enabled Debugger in IDE
+
+Debugging your Arduino project allows you to dive deep into your code and troubleshoot as well as analyze the code execution. You can gain full access to the microcontroller's internal registers, memory, and variables. 
+
+To access and debug the Arduino's MCU it's important that we set the correct programmer. Select **Tools** > **Programmer** > **ARM CMSIS-DAP compatible**.
+
+![](img/debugger.png)
+
+
 ## Reference
 * [Arduino UNO R4 Wifi](https://docs.arduino.cc/hardware/uno-r4-wifi/)
+* [Debugging the Arduino UNO R4 WiFi](https://docs.arduino.cc/tutorials/uno-r4-wifi/debugger/)
 * [Built-in Examples](https://docs.arduino.cc/built-in-examples/)
 
