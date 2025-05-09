@@ -1,6 +1,6 @@
 ---
 date: 2025-05-08T20:07:22+08:00
-draft: false
+draft: true
 title: Arduino by Examples - Analog Read Serial
 categories: 
   - Getting Started with Arduino
