@@ -1,15 +1,26 @@
+int greenPin = 10;
+int redPin = 11;
+
+int val = 0;
+
 void setup() {
-  // initialize digital pin LED_BUILDIN as an output
-  pinMode(LED_BUILTIN, OUTPUT)
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
-  // turn on the LED
-  digitalWrite(LED_BUILTIN, HIGH)
-  // wait for a second
-  delay(1000)
-  // turn off the LED
-  digitalWrite(LED_BUILTIN, LOW)
-  // wait for a second
-  delay(1000)
+  for (val = 255; val > 0; val--) {
+    analogWrite(redPin, val);
+    analogWrite(greenPin, 255 - val);
+    Serial.println(val, DEC);
+    // delay(30);
+  }
+
+  for (val = 0; val < 255; val++) {
+    analogWrite(redPin, val);
+    analogWrite(greenPin, 255 - val);
+    Serial.println(val, DEC);
+    // delay(30);
+  }
 }
