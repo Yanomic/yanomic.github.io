@@ -9,26 +9,12 @@ tags:
 - Software Design
 ---
 
-A batch is used to group journals in a time-bounded period.
-With batches, we could separate our concerns into bounded blocks and safely assume journals in past batches have been
-correctly.
-Once discrepancy happens, we only need to check bathes that have not closed.
-Closed batches could also used to generate financial reports.
+A batch groups journal entries within a specific time period. This structure helps isolate concerns into well-defined segments, allowing us to trust that journals in past batches have been properly closed. If discrepancies occur, we only need to review batches that are still open. Closed batches can also be used for generating financial reports.
 
-Each batch is defined by the **account** it links to, the **register type** it is for, and the **period** it refers to.
-There are a few timestamps that define the status a batch is in:
+Each batch is identified by the **account** it belongs to, the **register type** it applies to, and the **time period** it covers. Its status is determined by several key timestamps:
 
-* **Pre-Open**: Current date is before the period start date. No journal with a booking date before the period start
-  date may be booked into the batch. We could create batch in Pre-Open status upfront to avoid spike when creating a lot
-  of batches at the same time(e.g., with the same period start date).
-* **Open**: Current date is after the period start date, but before the period end date(closed-open interval). A
-  journal entry that does not specify a batch will by default be assigned to this batch. No 2 batches are open at the
-  same time. The period start date can be the same as period end date to indicate the batch was created for a (instant)
-  event.
-* **Post-Open**: Current date is after the period end date. However no period lock date has been filled in. Journals may
-  still be **booked** into the batch, but only if explicitly specified.
-* **Fixed**: The period lock date has been filled in, but not the period close date. Journals may only be **posted**
-  into this batch if the booking date is after the period end date. This typically indicates the moment an external
-  event has happened for the period of the batch.
-* **Closed**: The closed date is filled in. No journals may be posted to the batch. The sum of all lines in the batch
-  adds up tp zero.
+* **Pre-Open**: The current date is before the batch's period start date. No journal entries dated before this start date may be added. Creating batches in this state ahead of time helps prevent a bottleneck when many batches start on the same date.
+* **Open**: The current date falls between the period's start and end dates (exclusive of the end date). Journal entries without a specified batch are automatically assigned to this one. Only one batch can be open at a time for a given account and register. The start and end date may be the same to represent an instantaneous event.
+* **Post-Open**: The current date is after the period end date, but no period lock date has been set. Journal entries can still be booked into this batch, but only if explicitly assigned.
+* **Fixed**: The period lock date is set, but the close date is not. Only journal entries dated after the period end date may be posted into this batch. This usually reflects an external event occurring related to the batch period.
+* **Closed**: The period close date has been set. No further entries may be posted to this batch. The sum of all lines in the batch should equal zero.
