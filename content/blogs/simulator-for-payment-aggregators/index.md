@@ -1,6 +1,5 @@
 ---
 date: 2025-05-29T08:41:50+08:00
-draft: true
 title: Simulators for Payment Aggregators - Benefits, Challenges, and Limitations
 categories:
     - Simulators for Payment Aggregators 
