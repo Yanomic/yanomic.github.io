@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Accounting System - How would ChatGPT Design
 date: 2023-07-24T19:58:43+0800
 categories:

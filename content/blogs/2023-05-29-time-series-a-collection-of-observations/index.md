@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Time Series(A Collection of Observations)
 date: 2023-05-29T19:22:57+0800
 categories:

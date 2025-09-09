@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Data Type Optimizations
 date: 2023-07-01T11:39:13+0800
 categories:

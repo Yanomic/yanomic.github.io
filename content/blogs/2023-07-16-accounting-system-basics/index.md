@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Accounting System Basics
 date: 2023-07-16T11:10:33+0800
 categories:

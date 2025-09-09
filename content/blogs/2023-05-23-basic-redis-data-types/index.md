@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Basic Redis Data Types
 date: 2023-05-23T23:55:53+0800
 categories:
