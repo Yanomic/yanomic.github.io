@@ -71,16 +71,16 @@ The widespread adoption of bank-based QR payments in Southeast Asia has transfor
 
 ### Market Size and Adoption of National QR Standards in ASEAN
 
-The table below summarizes the key statistics for major national QR payment standards across ASEAN countries, including Vietnam and the Philippines. It covers operating region, population, estimated payment market size, and the approximate share of payments by cards, wallets, and bank-based QR payments.
+The table below summarizes the key statistics for major national QR payment standards across ASEAN countries, including Vietnam and the Philippines. It covers operating region, year of initiative launch, population, estimated payment market size, and the approximate share of payments by cards, wallets, and bank-based QR payments.
 
-| National QR Standard      | Operating Region      | Population (Millions) | Est. Payment Market Size (USD, 2023) | % by Card | % by Wallet | % by Bank-Based QR |
-|--------------------------|----------------------|-----------------------|--------------------------------------|-----------|-------------|--------------------|
-| **PromptPay**            | Thailand             | 71                    | $400B                                | 12%       | 38%         | 50%               |
-| **SGQR**                 | Singapore            | 5.9                   | $110B                                | 32%       | 40%         | 28%               |
-| **DuitNow QR**           | Malaysia             | 33                    | $200B                                | 18%       | 44%         | 38%               |
-| **QRIS**                 | Indonesia            | 277                   | $600B                                | 8%        | 60%         | 32%               |
-| **VNPAY, VietQR**        | Vietnam              | 100                   | $250B                                | 6%        | 62%         | 32%               |
-| **QR Ph**                | Philippines          | 117                   | $120B                                | 10%       | 70%         | 20%               |
+| National QR Standard      | Operating Region      | Launch Year | Population (Millions) | Est. Payment Market Size (USD, 2023) | % by Card | % by Wallet | % by Bank-Based QR |
+|--------------------------|----------------------|-------------|-----------------------|--------------------------------------|-----------|-------------|--------------------|
+| **PromptPay**            | Thailand             | 2017        | 71                    | $400B                                | 12%       | 38%         | 50%               |
+| **SGQR**                 | Singapore            | 2018        | 5.9                   | $110B                                | 32%       | 40%         | 28%               |
+| **DuitNow QR**           | Malaysia             | 2019        | 33                    | $200B                                | 18%       | 44%         | 38%               |
+| **QRIS**                 | Indonesia            | 2019        | 277                   | $600B                                | 8%        | 60%         | 32%               |
+| **VNPAY, VietQR**        | Vietnam              | 2021        | 100                   | $250B                                | 6%        | 62%         | 32%               |
+| **QR Ph**                | Philippines          | 2019        | 117                   | $120B                                | 10%       | 70%         | 20%               |
 
 > **Notes:**
 > - *Payment market size* refers to the total value of digital payments (including retail, P2P, and merchant payments) in 2023, based on industry and central bank reports.
