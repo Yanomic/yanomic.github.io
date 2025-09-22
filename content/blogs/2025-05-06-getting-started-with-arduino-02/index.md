@@ -1,7 +1,6 @@
 ---
 draft: true
 date: 2025-05-06T09:58:55+08:00
-draft: false
 title: The Language Reference - Functions
 categories: 
   - Getting Started with Arduino

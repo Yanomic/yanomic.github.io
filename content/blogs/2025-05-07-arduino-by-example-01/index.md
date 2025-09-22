@@ -1,7 +1,6 @@
 ---
 draft: true
 date: 2025-05-07T21:04:47+08:00
-draft: false
 title: Arduino by Examples - Preparation
 categories: 
   - Getting Started with Arduino
