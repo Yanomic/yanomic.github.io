@@ -132,7 +132,6 @@ skills:
 
 **Engineering leader** with extensive expertise in architecting and delivering **scalable**, **high-performance systems** across **payments**, **enterprise software**, and **fintech domains**. 
 Passionate about tackling **complex technical challenges** while ensuring solutions directly align with **strategic business objectives**. 
-Committed to building systems that prioritize **reliability**, **maintainability**, and **sustainable architectural excellence**. 
 Demonstrated success in leading **distributed teams**, navigating **competing priorities**, and driving **measurable business impact** through system optimization and consistent delivery of **high-value outcomes**.
 
 ## Values & Ways of Working
