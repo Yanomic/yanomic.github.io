@@ -1,0 +1,16 @@
+# GitHub Pages redirects
+# Documentation: https://docs.github.com/en/pages/getting-started-with-github-pages/redirects-on-github-pages
+
+# Redirect all content sections to homepage (only allow homepage access)
+/blogs/* / 301
+/blogs / 301
+/categories/* / 301
+/categories / 301
+/category/* / 301
+/tags/* / 301
+/tags / 301
+/tag/* / 301
+/author/* / 301
+/index.xml / 301
+/sitemap.xml / 301
+/pagefind/* / 301
