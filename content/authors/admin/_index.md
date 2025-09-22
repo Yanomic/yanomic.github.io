@@ -140,20 +140,20 @@ Demonstrated success in leading **distributed teams**, navigating **competing pr
 
 <div style="text-align: center;">
 
-<h4 style="font-size: 1.2em; margin-top: 16px; margin-bottom: 12px; color: #2c3e50;">Team over heroes</h4>  
+<h4 style="font-size: 1.2em; margin-top: 16px; margin-bottom: 12px;">Team over heroes</h4>  
 I believe long-term success comes from strong, collaborative teams rather than individual heroics.
 
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; color: #2c3e50;">Ownership mindset</h4> 
+<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px;">Ownership mindset</h4> 
 I take full responsibility for outcomes, from initial design through production delivery.
 
 </div>
 
 <div style="text-align: center;">
 
-<h4 style="font-size: 1.2em; margin-top: 16px; margin-bottom: 12px; color: #2c3e50;">Iterative improvement</h4>  
+<h4 style="font-size: 1.2em; margin-top: 16px; margin-bottom: 12px;">Iterative improvement</h4>  
 Great systems are not built once; they evolve through continuous iteration and learning.
 
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; color: #2c3e50;">Transparent communication</h4>  
+<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px;">Transparent communication</h4>  
 Open and timely feedback builds trust and keeps teams effective, even under pressure.
 
 </div>
