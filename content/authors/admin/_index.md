@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Team Lead | Software Engineer | Problem Solver | Domain-Driven Designer
+role: Engineering Leader | Software Architect | Technical Problem Solver | Domain-Driven Designer
 
 # Short bio (displayed in user profile at end of posts)
 #bio: My research interests include distributed robotics, mobile computing and programmable matter.
@@ -56,9 +56,9 @@ work:
     date_start: 2022-09-01
     date_end: ''
     summary: |
-      * Led the successful adoption of Scrum to enhance development efficiency and cross-team collaboration, strategically rolling out tailored agile practices that matched the team’s evolving maturity - boosted delivery velocity and effectiveness, resulting in recognition as the top-performing team within the function group.
-      * Defined and aligned OKRs with stakeholders, taking full ownership of key results and driving execution with clarity and accountability — garnering cross-functional recognition for fostering focus and measurable impact.
-      * Mentored and empowered team members to lead global engineering initiatives, including the decomposition of monolithic systems and implementation of monitoring metrics for alternative and bank-based payments — demonstrating strong technical leadership and deep understanding of business needs.
+      * Successfully implemented Scrum methodology across the team, customizing agile practices to match our evolving maturity and dramatically improving delivery velocity — resulting in recognition as the top-performing team in our function group.
+      * Championed OKR alignment with key stakeholders, taking complete ownership of critical outcomes and driving execution with precision — earning cross-functional recognition for delivering measurable business impact.
+      * Mentored team members to lead high-impact global engineering initiatives, including microservices decomposition and comprehensive monitoring for alternative and bank-based payment systems — showcasing both technical depth and business acumen.
   - position: Full Stack Java Developer
     company_name: Adyen • Singapore
     company_url: 'https://www.adyen.com/'
@@ -66,9 +66,9 @@ work:
     date_start: 2019-08-01
     date_end: 2022-08-31
     summary: |
-      *	Led the end-to-end development of two India-specific payment integrations, enabling seamless processing of Alternative, Bank, and Card payments within the region.
-      * Drove key compliance initiatives such as token localization and data purging, managing the full migration of tokens from global to India infrastructure.
-      * Contributed significantly to various APAC payment integrations by crafting scalable technical solutions that supported the entire payment lifecycle — from onboarding to settlement.
+      * Architected and delivered two comprehensive India-specific payment integrations from scratch, enabling seamless processing of Alternative, Bank, and Card payments across the region.
+      * Spearheaded critical compliance initiatives including token localization and data purging, successfully orchestrating the complete migration of tokens from global to India-specific infrastructure.
+      * Played a pivotal role in multiple APAC payment integrations by designing robust, scalable solutions that supported the complete payment ecosystem — from merchant onboarding through settlement processing.
   - position: Manager
     company_name: Works Applications • Singapore
     company_url: 'https://www.worksap.com/'
@@ -76,10 +76,10 @@ work:
     date_start: 2018-07-01
     date_end: 2019-07-31
     summary: |
-      * Designed and implemented microservices structured around business domains, leveraging Spring Cloud and Kafka to enable reliable, real-time communication and improve system robustness.
-      * Spearheaded the transformation of a monolithic local payroll solution into a distributed microservices architecture. 
-      * Leveraged Docker for containerization and implemented Kubernetes for streamlined orchestration, monitoring, and lifecycle management.
-      * Developed an extensible framework capable of defining, validating, and managing jurisdiction-specific data while maintaining full compatibility with legacy legal forms and submission portals.
+      * Engineered a comprehensive microservices architecture organized around business domains, utilizing Spring Cloud and Kafka to establish reliable, real-time communication channels and significantly enhance system resilience.
+      * Led the complete transformation of a monolithic local payroll solution into a modern, distributed microservices ecosystem, dramatically improving scalability and maintainability.
+      * Implemented containerization strategies using Docker and deployed Kubernetes for efficient orchestration, comprehensive monitoring, and streamlined lifecycle management.
+      * Created a flexible, extensible framework for defining, validating, and managing jurisdiction-specific data while ensuring seamless compatibility with existing legal forms and government submission portals.
   - position: Software Engineer
     company_name: Works Applications • Shanghai, China
     company_url: 'https://www.worksap.com/'
@@ -87,10 +87,10 @@ work:
     date_start: 2014-08-01
     date_end: 2018-06-30
     summary: |
-      * Successfully led the end-to-end development of a new payroll product for the Thailand market, built from scratch to meet local compliance and operational needs. 
-      * Enhanced legacy systems with limited documentation by introducing extensible architecture and custom DSL enhancements, improving system flexibility and supporting overseas expansion. 
-      * Drove automation initiatives using Selenium and Jenkins, and significantly improved code quality through peer reviews and code smell detection. 
-      * Proactively collaborated in Agile teams, consistently aligning technical solutions with business goals and taking full ownership from design through deployment.
+      * Successfully architected and delivered a complete payroll product for the Thailand market from the ground up, meticulously designed to meet local compliance requirements and operational demands.
+      * Modernized legacy systems with minimal documentation by implementing extensible architecture patterns and custom DSL enhancements, dramatically improving system flexibility and enabling successful international expansion.
+      * Championed automation initiatives leveraging Selenium and Jenkins, while establishing robust code quality practices through comprehensive peer reviews and automated code smell detection.
+      * Excelled in Agile team environments, consistently delivering technical solutions that directly aligned with business objectives while maintaining end-to-end ownership from initial design through production deployment.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -132,7 +132,7 @@ skills:
         icon: custom/mute
 ---
 
-**Engineering leader** with deep expertise in designing and delivering **scalable**, **high-performance systems** in the **payments domain**. 
-Experienced in solving **complex technical challenges** while aligning solutions with **business goals**. 
-Focused on **reliability**, **maintainability**, and **long-term architectural integrity**. 
-Proven ability to lead **distributed teams**, balance **competing priorities**, and drive **business impact** by optimizing systems for **scale** and consistently delivering **high-value outcomes**.
+**Engineering leader** with extensive expertise in architecting and delivering **scalable**, **high-performance systems** within the **payments ecosystem**. 
+Passionate about tackling **complex technical challenges** while ensuring solutions directly align with **strategic business objectives**. 
+Committed to building systems that prioritize **reliability**, **maintainability**, and **sustainable architectural excellence**. 
+Demonstrated success in leading **distributed teams**, navigating **competing priorities**, and driving **measurable business impact** through system optimization and consistent delivery of **high-value outcomes**.
