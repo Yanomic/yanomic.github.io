@@ -134,11 +134,9 @@ skills:
 Passionate about tackling **complex technical challenges** while ensuring solutions directly align with **strategic business objectives**. 
 Demonstrated success in leading **distributed teams**, navigating **competing priorities**, and driving **measurable business impact** through system optimization and consistent delivery of **high-value outcomes**.
 
-## Values & Ways of Working
-
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
 
-<div>
+<div style="text-align: center;">
 
 <h4 style="font-size: 1.2em; margin-top: 16px; margin-bottom: 12px; color: #2c3e50;">Team over heroes</h4>  
 I believe long-term success comes from strong, collaborative teams rather than individual heroics.
@@ -148,7 +146,7 @@ I take full responsibility for outcomes, from initial design through production 
 
 </div>
 
-<div>
+<div style="text-align: center;">
 
 <h4 style="font-size: 1.2em; margin-top: 16px; margin-bottom: 12px; color: #2c3e50;">Iterative improvement</h4>  
 Great systems are not built once; they evolve through continuous iteration and learning.
