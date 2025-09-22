@@ -56,11 +56,9 @@ work:
     date_start: 2022-09-01
     date_end: ''
     summary: |
-      * Spearheaded the modularization and decomposition of a monolithic monorepo in the region, implementing containerized microservices architecture that enabled autonomous development and independent release cycles — reducing deployment dependencies and accelerating feature delivery.
-      * Led the standardization initiative for payment flows and payment behavior across the entire payment ecosystem, establishing consistent patterns and reducing complexity for integration and maintenance.
-      * Architected and built a comprehensive monitoring and observability framework that provides real-time insights into alternative and bank-based payment systems, enabling proactive issue detection and data-driven optimization decisions.
-      * Successfully implemented Scrum methodology across the team, customizing agile practices to match our evolving maturity and dramatically improving delivery velocity — resulting in recognition as the top-performing team in our function group.
-      * Championed OKR alignment with key stakeholders, taking complete ownership of critical outcomes and driving execution with precision — earning cross-functional recognition for delivering measurable business impact.
+      * Spearheaded monorepo decomposition and microservices migration in the region, enabling autonomy and independence for the teams while reducing deployment dependencies and accelerating feature delivery
+      * Led standardization of payment flows for alternative and bank-based payments and architected flow-oriented monitoring framework, reducing integration complexity, and enabling proactive issue detection with data-driven optimization
+      * Successfully implemented Scrum methodology across the team, customizing agile practices to match evolving team maturity and dramatically improving delivery velocity — resulting in recognition as top-performing team in function group
   - position: Full Stack Java Developer
     company_name: Adyen • Singapore
     company_url: 'https://www.adyen.com/'
@@ -68,9 +66,9 @@ work:
     date_start: 2019-08-01
     date_end: 2022-08-31
     summary: |
-      * Architected and delivered two comprehensive India-specific payment integrations from scratch, enabling seamless processing of Alternative, Bank, and Card payments across the region.
-      * Spearheaded critical compliance initiatives including token localization and data purging, successfully orchestrating the complete migration of tokens from global to India-specific infrastructure.
-      * Played a pivotal role in multiple APAC payment integrations by designing robust, scalable solutions that supported the complete payment ecosystem — from merchant onboarding through settlement processing.
+      * Architected and delivered two fullfledged India-specific payment integrations from scratch, enabling seamless processing of Alternative, Bank, and Card payments
+      * Spearheaded critical compliance initiatives including token localization and data purging, successfully orchestrating complete migration of tokens from global to India-specific infrastructure
+      * Played pivotal role in multiple APAC payment integrations by designing robust, scalable solutions that supported complete payment ecosystem from merchant onboarding through settlement processing
   - position: Manager
     company_name: Works Applications • Singapore
     company_url: 'https://www.worksap.com/'
@@ -78,21 +76,19 @@ work:
     date_start: 2018-07-01
     date_end: 2019-07-31
     summary: |
-      * Engineered a comprehensive microservices architecture organized around business domains, utilizing Spring Cloud and Kafka to establish reliable, real-time communication channels and significantly enhance system resilience.
-      * Led the complete transformation of a monolithic local payroll solution into a modern, distributed microservices ecosystem, dramatically improving scalability and maintainability.
-      * Implemented containerization strategies using Docker and deployed Kubernetes for efficient orchestration, comprehensive monitoring, and streamlined lifecycle management.
-      * Created a flexible, extensible framework for defining, validating, and managing jurisdiction-specific data while ensuring seamless compatibility with existing legal forms and government submission portals.
+      * Engineered comprehensive microservices architecture organized around business domains, utilizing Spring Cloud and Kafka to establish reliable, real-time communication channels and significantly enhance system resilience
+      * Led complete transformation of monolithic local payroll solution into modern, distributed microservices ecosystem using Docker and Kubernetes, dramatically improving scalability and maintainability, and streamlining lifecycle management
+      * Created flexible, extensible framework for defining, validating, and managing jurisdiction-specific data while ensuring seamless compatibility with existing legal forms and government submission portals
   - position: Software Engineer
-    company_name: Works Applications • Shanghai, China
+    company_name: Works Applications • Shanghai
     company_url: 'https://www.worksap.com/'
     company_logo: ''
     date_start: 2014-08-01
     date_end: 2018-06-30
     summary: |
-      * Successfully architected and delivered a complete payroll product for the Thailand market from the ground up, meticulously designed to meet local compliance requirements and operational demands.
-      * Modernized legacy systems with minimal documentation by implementing extensible architecture patterns and custom DSL enhancements, dramatically improving system flexibility and enabling successful international expansion.
-      * Championed automation initiatives leveraging Selenium and Jenkins, while establishing robust code quality practices through comprehensive peer reviews and automated code smell detection.
-      * Excelled in Agile team environments, consistently delivering technical solutions that directly aligned with business objectives while maintaining end-to-end ownership from initial design through production deployment.
+      * Architected and delivered complete payroll product for Thailand market from ground up, meticulously designed to meet local compliance requirements and operational demands
+      * Modernized legacy systems with minimal documentation by implementing extensible architecture patterns and custom DSL enhancements, dramatically improving system flexibility and enabling successful international expansion
+      * Championed automation initiatives leveraging Selenium and Jenkins while establishing robust code quality practices, consistently delivering technical solutions in Agile environments
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
