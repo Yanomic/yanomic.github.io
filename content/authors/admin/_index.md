@@ -56,9 +56,11 @@ work:
     date_start: 2022-09-01
     date_end: ''
     summary: |
+      * Spearheaded the modularization and decomposition of a monolithic monorepo in the region, implementing containerized microservices architecture that enabled autonomous development and independent release cycles — reducing deployment dependencies and accelerating feature delivery.
+      * Led the standardization initiative for payment flows and payment behavior across the entire payment ecosystem, establishing consistent patterns and reducing complexity for integration and maintenance.
+      * Architected and built a comprehensive monitoring and observability framework that provides real-time insights into alternative and bank-based payment systems, enabling proactive issue detection and data-driven optimization decisions.
       * Successfully implemented Scrum methodology across the team, customizing agile practices to match our evolving maturity and dramatically improving delivery velocity — resulting in recognition as the top-performing team in our function group.
       * Championed OKR alignment with key stakeholders, taking complete ownership of critical outcomes and driving execution with precision — earning cross-functional recognition for delivering measurable business impact.
-      * Mentored team members to lead high-impact global engineering initiatives, including microservices decomposition and comprehensive monitoring for alternative and bank-based payment systems — showcasing both technical depth and business acumen.
   - position: Full Stack Java Developer
     company_name: Adyen • Singapore
     company_url: 'https://www.adyen.com/'
