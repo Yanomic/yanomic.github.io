@@ -33,6 +33,8 @@ profiles:
   #  - icon: at-symbol
   #    url: 'mailto:your-email@example.com'
   #    label: E-mail Me
+  - icon: home
+    url: https://yanomic.com/
   - icon: brands/github
     url: https://github.com/yan-hai
   - icon: brands/linkedin
