@@ -33,7 +33,7 @@ profiles:
   #  - icon: at-symbol
   #    url: 'mailto:your-email@example.com'
   #    label: E-mail Me
-  - icon: home
+  - icon: custom/home
     url: https://yanomic.com/
   - icon: brands/github
     url: https://github.com/yan-hai
@@ -142,20 +142,20 @@ Demonstrated success in leading **distributed teams**, navigating **competing pr
 
 <div style="text-align: center;">
 
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 800;">Team over heroes</h4>
+<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Team over heroes</h4>
 I believe long-term success comes from strong, collaborative teams rather than individual heroics.
 
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 800;">Ownership mindset</h4> 
+<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Ownership mindset</h4> 
 I take full responsibility for outcomes, from initial design through production delivery.
 
 </div>
 
 <div style="text-align: center;">
 
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 800;">Iterative improvement</h4>  
+<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Iterative improvement</h4>  
 Great systems are not built once; they evolve through continuous iteration and learning.
 
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 800;">Transparent communication</h4>
+<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Transparent communication</h4>
 Open and timely feedback builds trust and keeps teams effective, even under pressure.
 
 </div>
