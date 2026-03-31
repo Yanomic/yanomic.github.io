@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Engineering Leader | Software Architect | Problem Solver 
+role: Engineering Leader | Payments Enthusiast | Software Architect
 
 # Short bio (displayed in user profile at end of posts)
 #bio: My research interests include distributed robotics, mobile computing and programmable matter.
@@ -60,9 +60,9 @@ work:
     date_start: 2022-09-01
     date_end: ''
     summary: |
-      * Spearheaded monorepo decomposition and microservices migration in the region, enabling autonomy and independence for the teams while reducing deployment dependencies and accelerating feature delivery
-      * Led standardization of payment flows for alternative and bank-based payments and architected flow-oriented monitoring framework, reducing integration complexity, and enabling proactive issue detection with data-driven optimization
-      * Successfully implemented Scrum methodology across the team, customizing agile practices to match evolving team maturity and dramatically improving delivery velocity — resulting in recognition as top-performing team in function group
+      * Led regional monorepo decomposition and microservices migration across APAC, increasing team autonomy, reducing deployment dependencies, and accelerating feature delivery
+      * Standardized alternative and bank-based payment flows and architected a flow-oriented monitoring framework, reducing integration complexity and enabling proactive, data-driven issue detection
+      * Built and coached a high-performing team through tailored Scrum practices, improving delivery velocity and earning recognition as a top-performing team in the function group
   - position: Full Stack Java Developer
     company_name: Adyen • Singapore
     company_url: 'https://www.adyen.com/'
@@ -70,9 +70,9 @@ work:
     date_start: 2019-08-01
     date_end: 2022-08-31
     summary: |
-      * Architected and delivered two fullfledged India-specific payment integrations from scratch, enabling seamless processing of Alternative, Bank, and Card payments
-      * Spearheaded critical compliance initiatives including token localization and data purging, successfully orchestrating complete migration of tokens from global to India-specific infrastructure
-      * Played pivotal role in multiple APAC payment integrations by designing robust, scalable solutions that supported complete payment ecosystem from merchant onboarding through settlement processing
+      * Architected and delivered two India-specific payment integrations from scratch, enabling seamless processing across alternative, bank, and card payment methods
+      * Led critical compliance initiatives, including token localization and data purging, and orchestrated full token migration from global to India-specific infrastructure
+      * Played a pivotal role in multiple APAC payment integrations by designing robust, scalable solutions that supported the full payment lifecycle, from merchant onboarding to settlement
   - position: Engineering Manager
     company_name: Works Applications • Singapore
     company_url: 'https://www.worksap.com/'
@@ -80,9 +80,9 @@ work:
     date_start: 2016-12-01
     date_end: 2019-07-31
     summary: |
-      * Engineered comprehensive microservices architecture organized around business domains, utilizing Spring Cloud and Kafka to establish reliable, real-time communication channels and significantly enhance system resilience
-      * Led complete transformation of monolithic local payroll solution into modern, distributed microservices ecosystem using Docker and Kubernetes, dramatically improving scalability and maintainability, and streamlining lifecycle management
-      * Created flexible, extensible framework for defining, validating, and managing jurisdiction-specific data while ensuring seamless compatibility with existing legal forms and government submission portals
+      * Designed a domain-driven microservices architecture using Spring Cloud and Kafka to enable reliable, real-time communication and improve system resilience
+      * Led the end-to-end transformation of a monolithic local payroll solution into a distributed microservices ecosystem with Docker and Kubernetes, improving scalability, maintainability, and lifecycle management
+      * Built a flexible framework for defining, validating, and managing jurisdiction-specific data while maintaining compatibility with legal forms and government submission portals
   - position: Software Engineer
     company_name: Works Applications • Shanghai
     company_url: 'https://www.worksap.com/'
@@ -90,9 +90,9 @@ work:
     date_start: 2014-08-01
     date_end: 2016-11-30
     summary: |
-      * Architected and delivered complete payroll product for Thailand market from ground up, meticulously designed to meet local compliance requirements and operational demands
-      * Modernized legacy systems with minimal documentation by implementing extensible architecture patterns and custom DSL enhancements, dramatically improving system flexibility and enabling successful international expansion
-      * Championed automation initiatives leveraging Selenium and Jenkins while establishing robust code quality practices, consistently delivering technical solutions in Agile environments
+      * Architected and delivered a complete payroll product for the Thailand market from the ground up, tailored to local compliance requirements and operational needs
+      * Modernized legacy systems with limited documentation by introducing extensible architecture patterns and custom DSL enhancements, improving flexibility and enabling international expansion
+      * Championed automation initiatives with Selenium and Jenkins while establishing strong code quality practices and consistently delivering in Agile environments
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -134,29 +134,29 @@ skills:
         icon: custom/mute
 ---
 
-**Engineering leader** with extensive expertise in architecting and delivering **scalable**, **high-performance systems** across **payments**, **enterprise software**, and **fintech domains**. 
-Passionate about tackling **complex technical challenges** while ensuring solutions directly align with **strategic business objectives**. 
-Demonstrated success in leading **distributed teams**, navigating **competing priorities**, and driving **measurable business impact** through system optimization and consistent delivery of **high-value outcomes**.
+**Engineering leader** with deep experience delivering **scalable, high-performance payment platforms** across **APAC markets**.
+Experienced in driving outcomes at the intersection of **engineering execution**, **regional market complexity**, and **business growth**.
+Proven success leading **distributed teams**, aligning cross-functional stakeholders, and delivering **reliable, compliant, and merchant-focused** solutions from onboarding to settlement.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
 
 <div style="text-align: center;">
 
 <h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Team over heroes</h4>
-I believe long-term success comes from strong, collaborative teams rather than individual heroics.
+I believe long-term success comes from strong, collaborative teams, not individual heroics.
 
 <h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Ownership mindset</h4> 
-I take full responsibility for outcomes, from initial design through production delivery.
+I take full responsibility for outcomes, from initial design to production delivery.
 
 </div>
 
 <div style="text-align: center;">
 
 <h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Iterative improvement</h4>  
-Great systems are not built once; they evolve through continuous iteration and learning.
+Great systems are never "done"; they evolve through continuous iteration and learning.
 
 <h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Transparent communication</h4>
-Open and timely feedback builds trust and keeps teams effective, even under pressure.
+Open, timely feedback builds trust and keeps teams effective, even under pressure.
 
 </div>
 
