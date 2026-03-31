@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Engineering Leader | Software Architect | Technical Problem Solver | Domain-Driven Designer
+role: Engineering Leader | Software Architect | Problem Solver 
 
 # Short bio (displayed in user profile at end of posts)
 #bio: My research interests include distributed robotics, mobile computing and programmable matter.
@@ -43,10 +43,12 @@ profiles:
 # https://docs.google.com/document/d/1TgRTecBHQWO3GedX06HNCOmCM2efL8Qu9hrETN5v-tg/edit?tab=t.0
 education:
   - major: Computer Technology
+    institution_url: 'https://www.nju.edu.cn/en/'
     institution: Master's degree • Nanjing University • Nanjing, China
     date_end: 2014-07-31
     date_start: 2011-09-01
   - major: Network Engineering
+    institution_url: 'https://english.ncu.edu.cn/'
     institution: Bachelor's degree • Nanchang University • Nanchang, China
     date_start: 2006-09-01
     date_end: 2010-07-31
@@ -140,20 +142,20 @@ Demonstrated success in leading **distributed teams**, navigating **competing pr
 
 <div style="text-align: center;">
 
-<h4 style="font-size: 1.2em; margin-top: 16px; margin-bottom: 12px;">Team over heroes</h4>  
+<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 800;">Team over heroes</h4>
 I believe long-term success comes from strong, collaborative teams rather than individual heroics.
 
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px;">Ownership mindset</h4> 
+<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 800;">Ownership mindset</h4> 
 I take full responsibility for outcomes, from initial design through production delivery.
 
 </div>
 
 <div style="text-align: center;">
 
-<h4 style="font-size: 1.2em; margin-top: 16px; margin-bottom: 12px;">Iterative improvement</h4>  
+<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 800;">Iterative improvement</h4>  
 Great systems are not built once; they evolve through continuous iteration and learning.
 
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px;">Transparent communication</h4>  
+<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 800;">Transparent communication</h4>
 Open and timely feedback builds trust and keeps teams effective, even under pressure.
 
 </div>
