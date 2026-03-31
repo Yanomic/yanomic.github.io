@@ -73,11 +73,11 @@ work:
       * Architected and delivered two fullfledged India-specific payment integrations from scratch, enabling seamless processing of Alternative, Bank, and Card payments
       * Spearheaded critical compliance initiatives including token localization and data purging, successfully orchestrating complete migration of tokens from global to India-specific infrastructure
       * Played pivotal role in multiple APAC payment integrations by designing robust, scalable solutions that supported complete payment ecosystem from merchant onboarding through settlement processing
-  - position: Manager
+  - position: Engineering Manager
     company_name: Works Applications • Singapore
     company_url: 'https://www.worksap.com/'
     company_logo: ''
-    date_start: 2018-07-01
+    date_start: 2016-12-01
     date_end: 2019-07-31
     summary: |
       * Engineered comprehensive microservices architecture organized around business domains, utilizing Spring Cloud and Kafka to establish reliable, real-time communication channels and significantly enhance system resilience
@@ -88,7 +88,7 @@ work:
     company_url: 'https://www.worksap.com/'
     company_logo: ''
     date_start: 2014-08-01
-    date_end: 2018-06-30
+    date_end: 2016-11-30
     summary: |
       * Architected and delivered complete payroll product for Thailand market from ground up, meticulously designed to meet local compliance requirements and operational demands
       * Modernized legacy systems with minimal documentation by implementing extensible architecture patterns and custom DSL enhancements, dramatically improving system flexibility and enabling successful international expansion
