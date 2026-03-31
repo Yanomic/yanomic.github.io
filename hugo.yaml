@@ -5,11 +5,11 @@ languageCode: "en-us"
 params:
   description: "Yanomic.com"
 
-menu:
-  main:
-    - name: Blogs
-      url: /blogs/
-      weight: 20
+# menu:
+  # main:
+    # - name: Blogs
+      # url: /blogs/
+      # weight: 20
 
 module:
   imports:
