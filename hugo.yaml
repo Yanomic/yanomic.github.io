@@ -8,3 +8,7 @@ params:
 module:
   imports:
     - path: "github.com/yan/yanomic-theme"
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
