@@ -18,7 +18,7 @@ role: Engineering Leader | Payments Enthusiast | Software Architect
 
 # Organizations/Affiliations (footnote under display name; optional icon, same paths as network icons)
 organizations:
-  - name: '@Adyen'
+  - name: 'Adyen'
     url: https://www.adyen.com/
     icon: custom/adyen
 
