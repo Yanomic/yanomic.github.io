@@ -13,26 +13,18 @@ last_name: Yan
 status:
   icon: 🐢
 
-# Is this the primary user of the site?
-superuser: true
-
 # Role/position/tagline
 role: Engineering Leader | Payments Enthusiast | Software Architect
 
-# Short bio (displayed in user profile at end of posts)
-#bio: My research interests include distributed robotics, mobile computing and programmable matter.
-
-# Organizations/Affiliations to display in Biography blox
+# Organizations/Affiliations (footnote under display name; optional icon, same paths as network icons)
 organizations:
   - name: '@Adyen'
     url: https://www.adyen.com/
+    icon: custom/adyen
 
-# Social network links
+# Network links (see theme .network-icon)
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
-profiles:
-  #  - icon: at-symbol
-  #    url: 'mailto:your-email@example.com'
-  #    label: E-mail Me
+network:
   - icon: custom/home
     url: https://yanomic.com/
   - icon: brands/github
