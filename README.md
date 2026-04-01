@@ -22,6 +22,4 @@ hugo server --buildDrafts --buildExpired --buildFuture \
 hugo mod tidy
 ```
 
-## References
-- [Hugo Documentation](https://gohugo.io/documentation/)
 
