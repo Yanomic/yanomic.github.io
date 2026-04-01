@@ -1,4 +1,4 @@
-# Yanomic.com
+# [Yanomic.com](https://yanomic.com/)
 
 Personal website hosted with Hugo.
 
