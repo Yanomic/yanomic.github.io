@@ -4,6 +4,8 @@ languageCode: "en-us"
 
 params:
   description: "Yanomic.com"
+  authorName: "Yan Hai"
+  copyrightYearStart: 2023
 
 # menu:
   # main:
@@ -13,8 +15,8 @@ params:
 
 module:
   imports:
-    - path: "github.com/Yanomic/yanomic-theme"
+    - path: "github.com/yanomic/yanomic-theme"
 markup:
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: false

@@ -138,27 +138,17 @@ skills:
 Experienced in driving outcomes at the intersection of **engineering execution**, **regional market complexity**, and **business growth**.
 Proven success leading **distributed teams**, aligning cross-functional stakeholders, and delivering **reliable, compliant, and merchant-focused** solutions from onboarding to settlement.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
-
-<div style="text-align: center;">
-
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Team over heroes</h4>
+{{< about-values >}}
+{{< value-item title="Team over heroes" >}}
 I believe long-term success comes from strong, collaborative teams, not individual heroics.
-
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Ownership mindset</h4> 
+{{< /value-item >}}
+{{< value-item title="Ownership mindset" >}}
 I take full responsibility for outcomes, from initial design to production delivery.
-
-</div>
-
-<div style="text-align: center;">
-
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Iterative improvement</h4>  
+{{< /value-item >}}
+{{< value-item title="Iterative improvement" >}}
 Great systems are never "done"; they evolve through continuous iteration and learning.
-
-<h4 style="font-size: 1.2em; margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Transparent communication</h4>
+{{< /value-item >}}
+{{< value-item title="Transparent communication" >}}
 Open, timely feedback builds trust and keeps teams effective, even under pressure.
-
-</div>
-
-</div>
-
+{{< /value-item >}}
+{{< /about-values >}}
